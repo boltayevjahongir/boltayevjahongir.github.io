@@ -1,0 +1,148 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F7FAFD;
+}
+.navbar{
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+.img-logo{
+    width: 250px;
+}
+header{
+    position: relative;
+    overflow: hidden;
+}
+h1{
+    font-size: 4rem;
+    line-height: 4.875rem;
+    letter-spacing: -1px;
+}
+header .shape img{
+    position: absolute;
+    z-index: -1;
+
+}
+header .shape img:nth-child(1){
+    width: 600px;
+    left: -300px;
+}
+header .shape img:nth-child(2){
+    width: 100px;
+    right: 100px;
+    top: 100px;
+}
+header .shape img:nth-child(3){
+    width: 150px;
+    right: 150px;
+    top: 90px;
+    left: 100px;
+}
+header .shape img:nth-child(4){
+    position: absolute;
+    width: 1200px;
+    right: 1200px;
+    top: 90px;
+    right: -500px;
+    z-index: -2;
+}
+.card-effect{
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+.iconBox{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #116DFA;
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100px;
+}
+.secvice{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.secvice::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: #116DFA;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.secvice:hover .iconBox{
+    background-color: #fff;
+    color: #116DFA;
+}
+.secvice:hover h5,
+.secvice:hover p{
+    color: #fff;
+}
+.secvice:hover::after{
+    opacity: 1;
+    top: 0;
+}
+
+.gallery .imgBox img{
+    width: 100%;
+}
+.galleryBox{
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.imgBox{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: flex;
+    transition: all 0.4s ease;
+}
+.imgBox::after{
+    content: "VIEW";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #116efa67;
+    z-index: 2;
+    opacity: 1;
+    transform: scale(0);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #F7FAFD;
+    font-weight: 900;
+
+   }
+   .imgBox:hover{
+       transform: translateY(-10px);
+   }
+   .imgBox:hover::after{
+    transform: scale(0.8);  
+   }
+
+
+
