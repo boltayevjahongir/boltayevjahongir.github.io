@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box !important;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -17,8 +20,31 @@ header{
 }
 h1{
     font-size: 4rem;
-    line-height: 4.875rem;
     letter-spacing: -1px;
+    display: inline-block;
+    position: relative;
+}
+.min-vh-100{
+    min-height: 100vh;
+}
+.title-hr h1::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #c3c3c3;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0.4);
+    transition: transform 0.4s ease;
+    z-index: -1;
+    
+
+}
+.title-hr h1:hover::after{
+    transform: scaleX(1); 
 }
 header .shape img{
     position: absolute;
@@ -59,7 +85,7 @@ header .shape img:nth-child(4){
     box-shadow: none;
     transform: translateY(5px);
 }
-.iconBox{
+.secvice .iconBox{
     width: 54px;
     height: 54px;
     display: flex;
@@ -110,14 +136,14 @@ header .shape img:nth-child(4){
     justify-content: center;
     align-items: center; 
 }
-.imgBox{
+.galleryBox .imgBox{
     position: relative;
     z-index: 2;
     overflow: hidden;
     display: flex;
     transition: all 0.4s ease;
 }
-.imgBox::after{
+.galleryBox .imgBox::after{
     content: "VIEW";
     width: 100%;
     height: 100%;
@@ -137,12 +163,84 @@ header .shape img:nth-child(4){
     font-weight: 900;
 
    }
-   .imgBox:hover{
+   .galleryBox .imgBox:hover{
        transform: translateY(-10px);
    }
-   .imgBox:hover::after{
+   .galleryBox .imgBox:hover::after{
     transform: scale(0.8);  
    }
 
 
+   /* Team=============== */
+.team{
+    min-height: 100vh;
+}
+.team .teamBox{
+    
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
+}
+    .imgBox img{
+        width: 100%;
+    }
+   .teamBox .imgBox{
+       position: relative;
+   }
 
+   .teamBox .imgBox .over{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: #0866f369;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       color: #fff;
+       transform: scaleY(0);
+       transition: transform 0.4s ease;
+
+   }
+
+   .teamBox .imgBox .over .over-textBox ul{
+       padding: 0;
+   }
+.teamBox .imgBox .over .over-textBox ul li{
+    display: inline;
+    list-style: none;
+}
+.teamBox .imgBox .over .over-textBox ul li a{
+    padding: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    line-height: 50px;
+    color: #fff;
+    font-size: 25px;
+  
+}
+.teamBox .imgBox:hover .over{
+    transform: scaleY(1);
+}
+.teamBox .textBox{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.teamBox .textBox h3{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.teamBox .textBox p{
+  
+}
+
+
+@media (max-width: 991.98px) {
+.navbar-nav li{
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+    font-size: 20px;
+}
+
+}
