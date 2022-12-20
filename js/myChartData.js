@@ -59,7 +59,8 @@ var faculty = ["Magistratura bo'limi", "Tabiiy fanlar fakulteti", "Milliy libos 
       plugins: {
         title: {
             display: true,
-            text: 'Fan doktorlari 36 nafar'
+            text: 'Fan doktorlari 36 nafar',
+            font: {weight: 'bold', size: '18px'},
         }
     }
     }
@@ -92,7 +93,8 @@ var faculty = ["Magistratura bo'limi", "Tabiiy fanlar fakulteti", "Milliy libos 
       plugins: {
         title: {
             display: true,
-            text: 'Fan nomzodlari va falsafa doktorlari 177 nafar'
+            text: 'Fan nomzodlari va falsafa doktorlari 177 nafar',
+            font: {weight: 'bold', size: '18px'},
         }
     }
     }
@@ -124,7 +126,8 @@ var faculty = ["Magistratura bo'limi", "Tabiiy fanlar fakulteti", "Milliy libos 
       plugins: {
         title: {
             display: true,
-            text: 'Ilmiy darajasiz professor o\'qituvchilar 649 nafar'
+            text: 'Ilmiy darajasiz professor o\'qituvchilar 649 nafar',
+            font: {weight: 'bold', size: '18px'},
         }
     }
     }
