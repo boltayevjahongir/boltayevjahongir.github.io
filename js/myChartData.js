@@ -33,3 +33,100 @@ var faculty = ["Magistratura bo'limi", "Tabiiy fanlar fakulteti", "Milliy libos 
     }
   });
     
+
+  const ds = document.getElementById('dsChart');
+
+  new Chart(ds, {
+    type: 'bar',
+    data: {
+      labels: ['30 yoshgacha', '31-40 yosh',  '41-50 yosh',  '51-60 yosh', '61-70 yosh',  '70 yoshdan yuqori',],
+      datasets: [
+        {
+          label: 'Fan doktorlari',
+          data: [0,3,2,3,14,12],
+          borderColor: '#36A2EB',
+          backgroundColor: '#FAAB78',
+        },
+      
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'Fan doktorlari 36 nafar'
+        }
+    }
+    }
+  });
+
+
+  
+  const phd = document.getElementById('phdChart');
+
+  new Chart(phd, {
+    type: 'bar',
+    data: {
+      labels: ['30 yoshgacha', '31-40 yosh',  '41-50 yosh',  '51-60 yosh', '61-70 yosh',  '70 yoshdan yuqori',],
+      datasets: [
+        {
+          label: 'Fan doktorlari',
+          data: [1,45,47,39,33,13],
+          borderColor: '#36A2EB',
+          backgroundColor: '#68B984',
+        },
+      
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'Fan nomzodlari va falsafa doktorlari 177 nafar'
+        }
+    }
+    }
+  });
+
+
+  const nophd = document.getElementById('nophdChart');
+
+  new Chart(nophd, {
+    type: 'bar',
+    data: {
+      labels: ['30 yoshgacha', '31-40 yosh',  '41-50 yosh',  '51-60 yosh', '61-70 yosh',  '70 yoshdan yuqori',],
+      datasets: [
+        {
+          label: 'Fan doktorlari',
+          data: [152,256,130,86,24,1],
+          borderColor: '#36A2EB',
+          backgroundColor: '#DC3535',
+        },
+      
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        title: {
+            display: true,
+            text: 'Ilmiy darajasiz professor o\'qituvchilar 649 nafar'
+        }
+    }
+    }
+  });
+    
