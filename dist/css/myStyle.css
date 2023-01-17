@@ -49,9 +49,13 @@ font-size: 25px;
 }
 .info-text{
     font-size: 18px;
+    margin: 0;
+    padding: 0;
+    margin: -10px;
+    margin: -10px 0 -10px 20px;
 }
 .info-text .info-value{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     color:rgb(62, 143, 196)
 }
