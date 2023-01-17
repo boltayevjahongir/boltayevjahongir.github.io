@@ -1,3 +1,57 @@
 .info-box-number{
 font-size: 25px;
 }
+.top-title{
+    background-color: rgb(62, 143, 196);
+    border-radius: 3px;
+    padding: 10px;
+   
+}
+.top-title h3, h4{
+    color: white;
+    text-align: center;
+    text-transform: uppercase
+}
+.info-title{
+    padding: 0;
+    border-radius: 10px;
+    background-color: rgba(237, 237, 237);
+    position: relative;
+    display: flex;
+    margin: 10px;
+    border: 1px solid rgba(94, 93, 93, 0.082);
+    border-radius: 15px;
+}
+.info-title .key-name{
+    background-color: rgb(62, 143, 196);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 15px;
+    width: 65%;
+    display: inline-block;
+}
+.info-title span{
+    display: inline-block;
+    text-align: center;
+    width: 35%;
+    font-weight: 600;
+    font-size: 22px;
+  
+
+}
+.info-title .foiz{
+    font-size: 18px;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.info-text{
+    font-size: 18px;
+}
+.info-text .info-value{
+    font-size: 35px;
+    font-weight: 700;
+    color:rgb(62, 143, 196)
+}
