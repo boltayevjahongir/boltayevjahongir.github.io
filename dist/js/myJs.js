@@ -61,23 +61,25 @@ const employmentForm = new Chart(document.getElementById('pie-teacher-employment
     btn.download = 'O’qituvchilar soni(Mehnat shakli bo\'yicha).png';
   
 }
+ 
 
 // bar chart
+// const data = [7, 85, 58, 148, 233, 790, 895]
 
 const academicDegree = new Chart(document.getElementById('pie-teacher-academicDegree'), {
     type: 'bar',
   data: {
-    labels: ['Fan doktori, DSc', "Fan nomzodi, PhD", 'Darajasiz'],
+    labels: ["Katta ilmiy xodim", 'Fan doktori, DSc', 'Professor', "Dotsent","Fan nomzodi, PhD", 'Darajasiz', 'Unvonsiz'],
     datasets: [{
-      label: 'My First Dataset',
-      data: [85, 233, 790],
+      // labels: ["aklsdjlkas", "skhdnflksjd"],
+      data: [7, 85, 58, 148, 233, 790, 895],
       backgroundColor: [
         'rgba(0, 160, 90, 0.8)',
-        
+        'rgb(255,153,0)',
       ],
-    
-      borderWidth: 1
-    }]
+      borderWidth: 1,
+    },
+  ]
   },
   options: {
     responsive: true,
@@ -89,6 +91,9 @@ const academicDegree = new Chart(document.getElementById('pie-teacher-academicDe
     },
     
     plugins: {
+      legend: {
+        display: false
+       },
         datalabels: {
             anchor: 'end',
             align: 'top',
@@ -113,7 +118,7 @@ const academicDegree = new Chart(document.getElementById('pie-teacher-academicDe
         title: {
             display: true,
             color: "black",
-            text: 'Ilmiy darajalilar'
+            text: 'Ilmiy darajalilar & Ilmiy unvonlilar'
           }
     },
     animation : {
@@ -129,88 +134,11 @@ const academicDegree = new Chart(document.getElementById('pie-teacher-academicDe
     const btn = document.getElementById("academicDegree-down");
     btn.href=academicDegree.toBase64Image()
     btn.download = 'Ilmiy daraja.png';
-  
 }
 
 
 // academicRank
-const academicRank = new Chart(document.getElementById('pie-teacher-academicRank'), {
-    type: 'bar',
-  data: {
-    labels: ['Professor', "Katta ilmiy xodim", "Dotsent", 'Unvonsiz'],
-    datasets: [{
-      label: 'My First Dataset',
-      data: [58, 7, 148, 895],
-      backgroundColor: [
-        'rgb(255,153,0)',
-        
-      ],
-    
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    },
-    
-    plugins: {
-        datalabels: {
-            anchor: 'end',
-            align: 'top',
-            color: 'black',
-            color: 'rgba(0, 0, 0, 1.0)',
-            backgroundColor: null,
-            font: {
-                size: 16,
-                weight: 'bold',
-            },
-            formatter:(value, context)=>{
-                const datapoint = context.chart.data.datasets[0].data
-                function totalSum(total, datapoint){
-                  return total+datapoint;
-                }
-                const totalvalue = datapoint.reduce(totalSum, 0);
-                const persentageValue = (value/totalvalue*100).toFixed(1);
-      
-                return `${persentageValue} %`
-              }
-        },
-        title: {
-            display: true,
-            color: "black",
-            text: 'Ilmiy unvonlilar'
-          }
-    },
-    animation : {
-        onComplete : ()=>{
-          const btn = document.getElementById("academicRank-down");
-          btn.href=academicRank.toBase64Image()
-          btn.download = 'Ilmiy unvonlilar.png';
-        }
-     }
-    
-  },
 
-    plugins: [ChartDataLabels],
-    datalabels: {
-    anchor: 'end',
-    align: 'right',
-    offset: 50
-}
-    
-  
-  });
-  function done3(){
-    const btn = document.getElementById("academicRank-down");
-    btn.href=academicRank.toBase64Image()
-    btn.download = 'Ilmiy unvonlilar.png';
-  
-}
 
 
 const ctx = document.getElementById('province-bar-chart');

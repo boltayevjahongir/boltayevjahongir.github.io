@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-   This is a starter template page. Use this page to start your new project from
-   scratch. This page gets rid of all links and provides the needed markup only.
-   -->
 <html lang="en">
    <head>
       <meta charset="utf-8">
@@ -15,6 +11,8 @@
       <!-- Theme style -->
       <link rel="stylesheet" href="dist/css/adminlte.min.css">
       <link rel="stylesheet" href="dist/css/myStyle.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
    </head>
    <body class="hold-transition sidebar-mini">
@@ -62,7 +60,7 @@
          <!-- Main Sidebar Container -->
          <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="./index.html" class="brand-link">
             <img src="https://hemis.tersu.uz/static/crop/1/9/250_250_90_1957940547.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">HEMIS statistika</span>
             </a>
@@ -74,7 +72,7 @@
                      <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
                      <li class="nav-item">
-                        <a href="#" class="nav-link ">
+                        <a href="#" class="nav-link active">
                            <i class="nav-icon fas fa-tachometer-alt"></i>
                            <p>
                               Bosh sahifa
@@ -147,6 +145,29 @@
                            </li>
                         </ul>
                      </li>
+                     <li class="nav-item ">
+                        <a href="#" class="nav-link">
+                           <i class="nav-icon fas fa-user"></i>
+                           <p>
+                              O'qituvchi
+                              <i class="right fas fa-angle-left"></i>
+                           </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                              <a href="./html/teachers.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>O'qitvchi</p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="./html/teacherAdd.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Ma'lumot qo'shish</p>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
                      <li class="nav-item">
                         <a href="./sync.html" class="nav-link">
                            <i class="nav-icon fas fa-sync"></i>
@@ -172,17 +193,40 @@
                    </div>
                    <div class="content p-4">
                      <div class="row">
-                        <div class="col-md-4 "></div>
+                        <div class="col-md-4 ">
+                           <div class="info-title">
+                              <div class="key-name html">Bakalavryat/qizlar</div>
+                              <span>26305/12016</span>
+                           </div>
+                           <div class="info-title">
+                              <div class="key-name html">Kunduzgi/qo'shma dastur</div>
+                              <span>11714 <span class="foiz">(45%)</span>/16/ <span class="foiz">(0.1%)</span></span>
+                           </div>
+                           <div class="info-title">
+                              <div class="key-name html">Sirtqi</div>
+                              <span>10146 <span class="foiz">(39%)</span></span>
+                           </div>
+                           <div class="info-title">
+                              <div class="key-name html">Kechgi</div>
+                              <span>1378<span class="foiz">(5%)</span></span>
+                           </div>
+                           <div class="info-title">
+                              <div class="key-name html">Ikkinchi mutaxasis</div>
+                              <span>2051 <span class="foiz">(8%)</span></span>
+                           </div>
+                           <div class="info-title">
+                              <div class="key-name html">Magistratura qizlar</div>
+                              <span>914 <span class="foiz">(4%) /508</span></span>
+                           </div>
+                        </div>
                         <div class="col-md-4 ">
                            <div class="row mt-5">
                               <div class="col-md-7">
                                  <div class="info-text">Umumiy yer maydoni <span class="info-value">21,2 ga</span></div>
-                                 <div class="info-text">O'quv binolari <span class="info-value">10</span></div>
                               </div>
-                              <div class="col-md-5">
+                              <div class="col-md-5">                                
                                  <div class="info-text">Sport komplex <span class="info-value">1</span></div>
                                  <div class="info-text">Sport sallari <span class="info-value">2</span></div>
-                                 <div class="info-text">Amaliyot markazi <span class="info-value">1</span></div>
                               </div>
                            </div>
                            <div class="img-content">
@@ -190,13 +234,10 @@
                            </div>
                            <div class="row mt-5">
                               <div class="col-md-7">
-                                 <div class="info-text">Umumiy yer maydoni <span class="info-value">21,2 ga</span></div>
                                  <div class="info-text">O'quv binolari <span class="info-value">10</span></div>
                               </div>
                               <div class="col-md-5">
-                                 <div class="info-text">Sport komplex <span class="info-value">1</span></div>
-                                 <div class="info-text">Sport sallari <span class="info-value">2</span></div>
-                                 <div class="info-text">Amaliyot markazi <span class="info-value">1</span></div>
+                                 <div class="info-text">O'quv binolari <span class="info-value">10</span></div>
                               </div>
                            </div>
                         </div>
@@ -229,30 +270,7 @@
                               <div class="key-name html">Talabalar/qizlar</div>
                               <span>26224/13109</span>
                            </div>
-                           <div class="info-title">
-                              <div class="key-name html">Bakalavryat/qizlar</div>
-                              <span>26305/12016</span>
-                           </div>
-                           <div class="info-title">
-                              <div class="key-name html">Kunduzgi/qo'shma dastur</div>
-                              <span>11714 <span class="foiz">(45%)</span>/16/ <span class="foiz">(0.1%)</span></span>
-                           </div>
-                           <div class="info-title">
-                              <div class="key-name html">Sirtqi</div>
-                              <span>10146 <span class="foiz">(39%)</span></span>
-                           </div>
-                           <div class="info-title">
-                              <div class="key-name html">Kechgi</div>
-                              <span>1378<span class="foiz">(5%)</span></span>
-                           </div>
-                           <div class="info-title">
-                              <div class="key-name html">Ikkinchi mutaxasis</div>
-                              <span>2051 <span class="foiz">(8%)</span></span>
-                           </div>
-                           <div class="info-title">
-                              <div class="key-name html">Magistratura qizlar</div>
-                              <span>914 <span class="foiz">(4%) /508</span></span>
-                           </div>
+                           
                         </div>
                      </div>
                    </div>
@@ -293,7 +311,8 @@
                      </div>
                      <!-- /.col-md-4 -->
                      <!-- /.col-md-4 -->
-                     <div class="col-lg-4">
+
+                     <div class="col-lg-8">
                         <div class="card card-primary card-outline">
                            <div class="card-header">
                               <h3 class="card-title">Professor o'qituvchilar (1108 ta)</h3>
@@ -318,7 +337,7 @@
                      </div>
                      <!-- /.col-md-4 -->
                      <!-- /.col-md-4 -->
-                     <div class="col-lg-4">
+                     <!-- <div class="col-lg-4">
                         <div class="card card-primary card-outline">
                            <div class="card-header">
                               <h3 class="card-title">Professor o'qituvchilar (1108 ta)</h3>
@@ -340,7 +359,7 @@
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </div> -->
                      <!-- /.col-md-4 -->
                   </div>
                   <div class="card card-primary card-outline">
@@ -2700,15 +2719,21 @@
       <!-- ./wrapper -->
       <!-- REQUIRED SCRIPTS -->
       <!-- jQuery -->
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
       <script src="plugins/jquery/jquery.min.js"></script>
       <!-- Bootstrap 4 -->
       <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- AdminLTE App -->
       <script src="dist/js/adminlte.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
       
       <script src="dist/js/myJs.js"></script>
+      
+
+      
    </body>
 </html>

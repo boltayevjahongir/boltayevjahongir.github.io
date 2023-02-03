@@ -1,0 +1,87 @@
+
+.teacher-main-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 38px;
+    width: 100%;
+}
+
+.bb-radius{
+    border-radius: 6px;
+}
+
+.teacher-image img{
+    background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #5433FF, #20BDFF, #A5FECB) border-box;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    padding: 4px;
+    width: 180px;
+}
+
+
+.teacher-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: .9;
+    text-transform: lowercase;
+}
+
+.teacher-name h3::first-line {
+    text-transform: capitalize;
+}
+
+.teacher-table{
+    font-size: 1rem;
+}
+
+.teacher-contact{
+    width: 100%;
+    display: flex;
+}
+
+.teacher-contact a{
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.teacher-acedemic-info{
+    background-color: white;
+    border-radius: 12px;
+    border-top: solid #017BFF 8px;
+    padding: 12px 8px;
+}
+
+.acedemic-info{
+    padding: 0 8px;
+}
+
+.teacher-title{
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 4px;
+    opacity: .8;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.teacher-academic-info span img{
+    width: 20px;
+}
+
+.teacher-academic-info {
+    font-size: 18px;
+}
+
+.teacher-academic-title{
+    font-size: 16px;
+    font-weight: 500;
+    opacity: .8;
+    color: #191919;
+}
+
+
+
