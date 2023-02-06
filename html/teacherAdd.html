@@ -206,42 +206,63 @@
                            </div>
                         </div>
                      </div>
-                     <div class="row mx-1 mt-3">
-                        <div class="card card-primary card-outline teacher-grant bb-radius">
+                     <div class="row mt-3 mx-1">
+                        <div class="col-12 card card-primary card-outline teacher-grant bb-radius">
                            <div class="teacher-title">
                               Grantlar
                            </div>
                            <div class="grant-section pb-0 p-3 ">
                               <div class="grant-input">
-                                 <h6>Horijiy ilmiy-tadqiqot markazlari grantlarida ishtirok etish soni</h6>
+                                 <h6>Mualliflik asosida tashkil etiladigan o'quv kursi va to'garaklar soni</h6>
                                  <div class="row">
-                                    <div class="col-8 inputbox">
-                                       <input type="number" name="grant-1">
+                                    <div class="col-6 d-flex justify-content-center">
+                                       <div class="number-input" id="counter_grant_1">
+                                          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                          <input id="disable_grant_1" class="quantity" min="0" max="99" name="quantity" value="0" type="number">
+                                          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                        </div>
                                     </div>
-                                    <div class="col-4">
-                                       <button class="w-100 grant-button"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
+                                    <div class="col-3">
+                                       <button id="change_grant_1" class="w-100 btn btn-info"><i class="fa-solid fa-rotate"></i></button>
+                                    </div>
+                                    <div class="col-3">
+                                       <button id="save_grant_1"  class="w-100 btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
                                     </div>
                                  </div>
                               </div><hr>
                               <div class="grant-input">
-                                 <h6>Davlat grantlari asosidagi ilmiy tadqiqotarda ishtirok etish</h6>
+                                 <h6>Mualliflik asosida tashkil etiladigan o'quv kursi va to'garaklar soni</h6>
                                  <div class="row">
-                                    <div class="col-8">
-                                       <input type="number" name="grant-1">
+                                    <div class="col-6 d-flex justify-content-center">
+                                       <div class="number-input" id="counter_grant_2">
+                                          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                          <input id="disable_grant_2" class="quantity" min="0" max="99" name="quantity" value="0" type="number">
+                                          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                        </div>
                                     </div>
-                                    <div class="col-4">
-                                       <button class="w-100 grant-button"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
+                                    <div class="col-3">
+                                       <button id="change_grant_2" class="w-100 btn btn-info"><i class="fa-solid fa-rotate"></i></button>
+                                    </div>
+                                    <div class="col-3">
+                                       <button id="save_grant_2"  class="w-100 btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
                                     </div>
                                  </div>
                               </div><hr>
                               <div class="grant-input">
-                                 <h6>Sohalar buyurtmalari asosida ilmiy tadqiqotlarlarda ishtirok etib, topiladigan mablag' miqdori</h6>
+                                 <h6>Mualliflik asosida tashkil etiladigan o'quv kursi va to'garaklar soni</h6>
                                  <div class="row">
-                                    <div class="col-8">
-                                       <input type="number" name="grant-1">
+                                    <div class="col-6 d-flex justify-content-center">
+                                       <div class="number-input" id="counter_grant_3">
+                                          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                          <input id="disable_grant_3" class="quantity" min="0" max="99" name="quantity" value="0" type="number">
+                                          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                        </div>
                                     </div>
-                                    <div class="col-4">
-                                       <button class="w-100 grant-button"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
+                                    <div class="col-3">
+                                       <button id="change_grant_3" class="w-100 btn btn-info"><i class="fa-solid fa-rotate"></i></button>
+                                    </div>
+                                    <div class="col-3">
+                                       <button id="save_grant_3"  class="w-100 btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
                                     </div>
                                  </div>
                               </div><hr>
@@ -256,7 +277,7 @@
                               <option value="0">Daraja qo'shish</option>
                               <option value="1">Fan nomzodi, PhD</option>
                            </select>
-                           <div id="hidden_div" class="academicRank ">
+                           <div id="hidden_div" class="card card-primary card-outline mt-2 p-2">
                               <div class="row">
                                  <div class="col-lg-6">
                                     <label for="place_protection">Himoya joyi</label>
@@ -333,7 +354,7 @@
                               <option value="0">Unvon qo'shish</option>
                               <option value="1">Dotsent</option>
                            </select>
-                           <div id="hidden_div_two" class="academicRank ">
+                           <div id="hidden_div_two" class="card card-primary card-outline mt-2 p-2">
                               <div class="row">
                                  <div class="col-lg-6">
                                     <label for="place_protection">Himoya joyi</label>
@@ -572,6 +593,33 @@
     
 
          <script>
+               ( function ( document, window, index )
+               {
+                  var inputs = document.querySelectorAll( '.inputfile' );
+                  Array.prototype.forEach.call( inputs, function( input )
+                  {
+                     var label	 = input.nextElementSibling,
+                        labelVal = label.innerHTML;
+
+                     input.addEventListener( 'change', function( e )
+                     {
+                        var fileName = '';
+                        if( this.files && this.files.length > 1 )
+                           fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+                        else
+                           fileName = e.target.value.split( '\\' ).pop();
+
+                        if( fileName )
+                           label.querySelector( 'span' ).innerHTML = fileName;
+                        else
+                           label.innerHTML = labelVal;
+                     });
+
+                     // Firefox bug fix
+                     input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+                     input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+                  });
+               }( document, window, 0 ));
                $("#selectOne").change(function() {
                 if ($(this).val() == 0) {
                     $(".addDegre").attr("disabled", "disabled");
@@ -622,6 +670,35 @@
                document.querySelector("#change-button_4").onclick = function(){
                   document.getElementById("counter_4").style.pointerEvents = 'auto';
                   document.getElementById("disable-font_4").style.color = "black";
+               }
+
+               // Grand section js
+
+               document.querySelector("#save_grant_1").onclick = function(){
+                  document.getElementById("counter_grant_1").style.pointerEvents = 'none';
+                  document.getElementById("disable_grant_1").style.color = "#999999dd";
+               }
+               document.querySelector("#change_grant_1").onclick = function(){
+                  document.getElementById("counter_grant_1").style.pointerEvents = 'auto';
+                  document.getElementById("disable_grant_1").style.color = "black";
+               }
+
+               document.querySelector("#save_grant_2").onclick = function(){
+                  document.getElementById("counter_grant_2").style.pointerEvents = 'none';
+                  document.getElementById("disable_grant_2").style.color = "#999999dd";
+               }
+               document.querySelector("#change_grant_2").onclick = function(){
+                  document.getElementById("counter_grant_2").style.pointerEvents = 'auto';
+                  document.getElementById("disable_grant_2").style.color = "black";
+               }
+
+               document.querySelector("#save_grant_3").onclick = function(){
+                  document.getElementById("counter_grant_3").style.pointerEvents = 'none';
+                  document.getElementById("disable_grant_3").style.color = "#999999dd";
+               }
+               document.querySelector("#change_grant_3").onclick = function(){
+                  document.getElementById("counter_grant_3").style.pointerEvents = 'auto';
+                  document.getElementById("disable_grant_3").style.color = "black";
                }
                 
          </script> 
