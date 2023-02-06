@@ -1,209 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>AdminLTE 3 | Starter</title>
-      <!-- Google Font: Source Sans Pro -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-      <!-- Font Awesome Icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <!-- Theme style -->
-      <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
-      <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>AdminLTE 3 | Starter</title>
+   <!-- Google Font: Source Sans Pro -->
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+   <!-- Font Awesome Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- Theme style -->
+   <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
+   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 
 
-      <link rel="stylesheet" href="../dist/css/teacherInfo.css">
+   <link rel="stylesheet" href="../dist/css/teacherInfo.css">
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
-   </head>
-   <body class="hold-transition sidebar-mini">
-      <div class="wrapper">
-         <!-- Navbar -->
-         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-               <li class="nav-item">
-                  <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-               </li>
-            </ul>
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-               <!-- Navbar Search -->
-               <li class="nav-item">
-                  <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+   <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+         <!-- Left navbar links -->
+         <ul class="navbar-nav">
+            <li class="nav-item">
+               <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+         </ul>
+         <!-- Right navbar links -->
+         <ul class="navbar-nav ml-auto">
+            <!-- Navbar Search -->
+            <li class="nav-item">
+               <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                   <i class="fas fa-search"></i>
-                  </a>
-                  <div class="navbar-search-block">
-                     <form class="form-inline">
-                        <div class="input-group input-group-sm">
-                           <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                           <div class="input-group-append">
-                              <button class="btn btn-navbar" type="submit">
+               </a>
+               <div class="navbar-search-block">
+                  <form class="form-inline">
+                     <div class="input-group input-group-sm">
+                        <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                           aria-label="Search">
+                        <div class="input-group-append">
+                           <button class="btn btn-navbar" type="submit">
                               <i class="fas fa-search"></i>
-                              </button>
-                              <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                           </button>
+                           <button class="btn btn-navbar" type="button" data-widget="navbar-search">
                               <i class="fas fa-times"></i>
-                              </button>
-                           </div>
+                           </button>
                         </div>
-                     </form>
-                  </div>
-               </li>
-               <!-- Notifications Dropdown Menu -->
-               <li class="nav-item">
-                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                     </div>
+                  </form>
+               </div>
+            </li>
+            <!-- Notifications Dropdown Menu -->
+            <li class="nav-item">
+               <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                   <i class="fas fa-expand-arrows-alt"></i>
-                  </a>
-               </li>
-            </ul>
-         </nav>
-         <!-- /.navbar -->
-         <!-- Main Sidebar Container -->
-         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-            <img src="https://hemis.tersu.uz/static/crop/1/9/250_250_90_1957940547.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <!-- /.navbar -->
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+         <!-- Brand Logo -->
+         <a href="index3.html" class="brand-link">
+            <img src="https://hemis.tersu.uz/static/crop/1/9/250_250_90_1957940547.png" alt="AdminLTE Logo"
+               class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">HEMIS statistika</span>
-            </a>
-            <!-- Sidebar -->
-            <div class="sidebar">
-               <!-- Sidebar Menu -->
-               <nav class="mt-2">
-                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                     <!-- Add icons to the links using the .nav-icon class
+         </a>
+         <!-- Sidebar -->
+         <div class="sidebar">
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+               <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                  data-accordion="false">
+                  <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
-                     <li class="nav-item">
-                        <a href="../index.html" class="nav-link">
-                           <i class="nav-icon fas fa-tachometer-alt"></i>
-                           <p>
-                              Bosh sahifa
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-chart-line"></i>
-                           <p>
-                              Statistika
-                              <i class="right fas fa-angle-left"></i>
-                           </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Talaba (umumiy)</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Talaba (ijtimoiy)
-                                 </p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Talaba ro'yxati (toifa)</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>O'qituvchi statistikasi</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Resurslar statistikasi</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Shartnoma statistikasi</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Bandlik statistikasi</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>O'zlashtirish statistikasi</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Mashg'ulot statistikasi</p>
-                              </a>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="nav-item ">
-                        <a href="#" class="nav-link active">
-                           <i class="nav-icon fas fa-user"></i>
-                           <p>
-                              O'qituvchi
-                              <i class="right fas fa-angle-left"></i>
-                           </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                              <a href="../html/teachers.html" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>O'qitvchi</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="../html/teacherAdd.html" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Ma'lumot qo'shish</p>
-                              </a>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="nav-item">
-                        <a href="../sync.html" class="nav-link">
-                           <i class="nav-icon fas fa-sync"></i>
-                           <p>
-                              Ma'lumotlarni yangilash
-                           </p>
-                        </a>
-                     </li>
+                  <li class="nav-item">
+                     <a href="../index.html" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                           Bosh sahifa
+                        </p>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <p>
+                           Statistika
+                           <i class="right fas fa-angle-left"></i>
+                        </p>
+                     </a>
+                     <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Talaba (umumiy)</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Talaba (ijtimoiy)
+                              </p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Talaba ro'yxati (toifa)</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>O'qituvchi statistikasi</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Resurslar statistikasi</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Shartnoma statistikasi</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Bandlik statistikasi</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>O'zlashtirish statistikasi</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Mashg'ulot statistikasi</p>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item ">
+                     <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                           O'qituvchi
+                           <i class="right fas fa-angle-left"></i>
+                        </p>
+                     </a>
+                     <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                           <a href="../html/teachers.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>O'qitvchi</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="../html/teacherAdd.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Ma'lumot qo'shish</p>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a href="../sync.html" class="nav-link">
+                        <i class="nav-icon fas fa-sync"></i>
+                        <p>
+                           Ma'lumotlarni yangilash
+                        </p>
+                     </a>
+                  </li>
 
-                  </ul>
-               </nav>
-               <!-- /.sidebar-menu -->
-            </div>
-            <!-- /.sidebar -->
-         </aside>
-         <!-- Content Wrapper. Contains page content -->
-         <div class="content-wrapper pt-4">
+               </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+         </div>
+         <!-- /.sidebar -->
+      </aside>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper pt-4">
 
-            <div class="container-fluid">
+         <div class="container-fluid">
 
-               <div class="row">
-                  <div class="col-4">
-                     <div class="row d-flex justify-content-center mx-1">
-                        <div class="teacher-main-info card card-primary card-outline mb-0 bb-radius">
-                           <div class="teacher-image">
-                              <img src="https://hemis.tersu.uz/static/crop/3/7/120_120_90_3711650415.jpg" alt="teacher photo">
-                           </div>
-                           <div class="teacher-name mt-3">
-                              <h3>BOYSARIYEVA <span>SAODAT</span></h3>
-                              <h3>BAXTIYOR QIZI</h3>
-                              <p></p>
-                           </div>
-                           <!-- <div class="teacher-contact">
+            <div class="row">
+               <div class="col-4">
+                  <div class="row d-flex justify-content-center mx-1">
+                     <div class="teacher-main-info card card-primary card-outline mb-0 bb-radius">
+                        <div class="teacher-image">
+                           <img src="https://hemis.tersu.uz/static/crop/3/7/120_120_90_3711650415.jpg"
+                              alt="teacher photo">
+                        </div>
+                        <div class="teacher-name mt-3">
+                           <h3>BOYSARIYEVA <span>SAODAT</span></h3>
+                           <h3>BAXTIYOR QIZI</h3>
+                           <p>Boshlang’ich ta’lim kafedrasi, Assistent<br>O‘rindoshlik (ichki-qo'shimcha)</p>
+                        </div>
+                        <!-- <div class="teacher-contact">
                               <a href="tel:+998918887744">
                                  <div class="btn btn-primary"><i class="fa-solid fa-phone"></i>&nbsp; Call</div>
                               </a>
@@ -211,242 +220,239 @@
                                  <div class="btn btn-outline-primary"><i class="fa-solid fa-envelope"></i>&nbsp; Massage</div>
                               </a>
                            </div> -->
-                        </div>
                      </div>
-                     <div class="col-4 mt-3" style="max-width: 100%;">
-                        <div class="card card-primary card-outline p-3 bb-radius">
-                           <p class="teacher-title pb-2">Akademik ma'lumotnoma</p>
-                           <div class="row d-flex align-items-center">
-                              <div class="col-6">
-                                 <h5 class="teacher-academic-info"><span><img src="../dist/img/education.png" alt=""></span> Ilmiy daraja</h5>
-                              </div>
-                              <div class="col-6 teacher-academic-title">
-                                 Darajasiz
-                              </div>
-                           </div><hr>
-                           <div class="row d-flex align-items-center">
-                              <div class="col-6">
-                                 <h5 class="teacher-academic-info"><span><img src="../dist/img/title.png" alt=""></span> Ilmiy unvon</h5>
-                              </div>
-                              <div class="col-6 teacher-academic-title">
-                                 Unvonsiz
-                              </div>
+                  </div>
+                  <div class="col-4 mt-3" style="max-width: 100%;">
+                     <div class="card card-primary card-outline p-3 bb-radius">
+                        <p class="teacher-title pb-2">Akademik ma'lumotnoma</p>
+                        <div class="row d-flex align-items-center">
+                           <div class="col-6">
+                              <h5 class="teacher-academic-info"><span><img src="../dist/img/education.png"
+                                       alt=""></span> Ilmiy daraja</h5>
+                           </div>
+                           <div class="col-6 teacher-academic-title">
+                              Darajasiz
+                           </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex align-items-center">
+                           <div class="col-6">
+                              <h5 class="teacher-academic-info"><span><img src="../dist/img/title.png" alt=""></span>
+                                 Ilmiy unvon</h5>
+                           </div>
+                           <div class="col-6 teacher-academic-title">
+                              Unvonsiz
+                           </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex align-items-center">
+                           <div class="col-6">
+                              <h5 class="teacher-academic-info"><span><img src="../dist/img/languages.png"
+                                       alt=""></span> Til bilish darajasi</h5>
+                           </div>
+                           <div class="col-6 teacher-academic-title">
+                              Darajasiz
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="col-8">
-                     <div class="card card-primary card-outline p-3 bb-radius">
-                        <div class="teacher-header">
-                           <p class="teacher-title" style="border: none;">
-                              O'qituvchi ma'lumotlari
-                           </p>
-                        </div>
+               </div>
+               <div class="col-8">
+                  <div class="card card-primary card-outline p-3 bb-radius">
+                     <div class="teacher-header">
+                        <p class="teacher-title" style="border: none;">
+                           O'qituvchi ma'lumotlari
+                        </p>
+                     </div>
                      <div class="row m-0">
                         <div class="col-6">
-                           <table class="table table-hover">
+                           <table class="table table-hover table-striped">
                               <tbody class="teacher-table">
-                                <tr>
-                                  <th>Familya:</th>
-                                  <td>BOYSARIYEVA</td>
-                                </tr>
-                                <tr>
-                                  <th>Ism:</th>
-                                  <td>SAODAT</td>
-                                </tr>
-                                <tr>
-                                  <th>Otasining ismi:</th>
-                                  <td>BAXTIYOR QIZI</td>
-                                </tr>
-                                <tr>
-                                  <th>Jinsi:</th>
-                                  <td>Ayol</td>
-                                </tr>
-                                <tr>
-                                 <th>Kafedra:</th>
-                                 <td>Boshlang’ich ta’lim kafedrasi</td>
-                               </tr>
+                                 <tr>
+                                    <th>Familya:</th>
+                                    <td>BOYSARIYEVA</td>
+                                 </tr>
+                                 <tr>
+                                    <th>Ism:</th>
+                                    <td>SAODAT</td>
+                                 </tr>
+                                 <tr>
+                                    <th>Otasining ismi:</th>
+                                    <td>BAXTIYOR QIZI</td>
+                                 </tr>
+                                 <tr>
+                                    <th>Jinsi:</th>
+                                    <td>Ayol</td>
+                                 </tr>
+                                 <tr>
+                                    <th>Kafedra:</th>
+                                    <td>Boshlang’ich ta’lim kafedrasi</td>
+                                 </tr>
                               </tbody>
-                            </table>
+                           </table>
                         </div>
                         <div class="col-6">
-                           <table class="table table-hover">
+                           <table class="table table-hover table-striped">
                               <tbody>
                                  <tr>
                                     <th>Bandlik:</th>
                                     <td>O‘rindoshlik (ichki-qo'shimcha)</td>
                                  </tr>
-                                <tr>
-                                  <th>Bandlik stafkasi:</th>
-                                  <td>0,50 stavka</td>
-                                </tr>
-                                <tr>
-                                 <th>Lavozimi</th>
-                                 <td>Assistent
-                                </td>
-                               </tr>
-                                <tr>
-                                  <th>Status</th>
-                                  <td>Ishlamoqda</td>
-                                </tr>
-                                <tr>
-                                 <th>Ishga kirgan yil</th>
-                                 <td>2020-yil</td>
-                               </tr>
+                                 <tr>
+                                    <th>Bandlik stafkasi:</th>
+                                    <td>0,50 stavka</td>
+                                 </tr>
+                                 <tr>
+                                    <th>Lavozimi</th>
+                                    <td>Assistent
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th>Status</th>
+                                    <td>Ishlamoqda</td>
+                                 </tr>
+                                 <tr>
+                                    <th>Ishga kirgan yil</th>
+                                    <td>2020-yil</td>
+                                 </tr>
                               </tbody>
-                            </table>
+                           </table>
                         </div>
-                      </div>  
                      </div>
-                     <div class="col-12 p-0">
-                        <!-- <div class="card card-primary card-outline p-2 bb-radius">
-                           <p class="teacher-title">Doimiy manzil ma'lumotlari</p>
-                           <div class="teacher-adress">
-                              <div class="row">
-                                 <div class="col-4">
-                                    <div class="row">
-                                       <div class="col-5">
-                                          <h5 class="teacher-academic-info"><span><img src="../dist/img/coronavirus.png" alt=""></span>Davlat</h5>
-                                       </div>
-                                       <div class="col-7">
-                                          <p class="teacher-academic-title">O'zbekiston</p>
-                                       </div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-5">
-                                          <h5 class="teacher-academic-info"><span><img src="../dist/img/usa.png" alt=""></span>Viloyat</h5>
-                                       </div>
-                                       <div class="col-7">
-                                          <p class="teacher-academic-title">Surxondaryo vil.</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-4">
-                                    <div class="row">
-                                       <div class="col-4">
-                                          <h5 class="teacher-academic-info"><span><img src="../dist/img/city.png" alt=""></span>Tuman</h5>
-                                       </div>
-                                       <div class="col-8">
-                                          <p class="teacher-academic-title">Termiz shaxri</p>
-                                       </div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-4">
-                                          <h5 class="teacher-academic-info"><span><img src="../dist/img/address.png" alt=""></span>Manzil</span</h5>
-                                       </div>
-                                       <div class="col-8">
-                                          <p class="teacher-academic-title">Termiz sh, Tinchlik MFY</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-4">
-                                    <div class="row">
-                                       <div class="col-4">
-                                          <h5 class="teacher-academic-info"><span><img src="../dist/img/smartphone.png" alt=""></span>Telefon</h5>
-                                       </div>
-                                       <div class="col-8">
-                                          <p class="teacher-academic-title">+998 90 666 77 88</p>
-                                       </div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-4">
-                                          <h5 class="teacher-academic-info"><span><img src="../dist/img/email.png" alt=""></span>Email</h5>
-                                       </div>
-                                       <div class="col-8">
-                                          <p class="teacher-academic-title">Boysarievas@mail.com</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                  </div>
+                  <div class="col-12 p-0">
+                     <div class="card card-primary card-outline p-2 bb-radius">
+                        <div class="row m-0">
+                           <div class="col-12">
+                              <table class="table table-hover ">
+                                 <tbody class="teacher-table">
+                                    <tr>
+                                       <th>Xorijiy ilmiy-tadqiqot markazlari grantlarida ishtirok etish soni:</th>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <th>Davalt grantalri asosida ilmiy tadqiqotlarda ishtirok etish soni:</th>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <th>Sohalar buyurtmalar asosida ilmiy-tadqiqotlarga ishtirok e'tib topiladigan
+                                          mablag' miqdori:</th>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <th>Horijiy hamkorlar bilan tayyorlanadigan o'quv adabiyotlari va maqolalar soni:
+                                       </th>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <th>Xalqaro konferensiyalar, seminarlar, ilmiy yoki o'quv loyihalarida ishtirok
+                                          etish soni (bevosita ishtirok etish):</th>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <th>Mutaxassislik bo'yicha xorijiy tilda o'qitadigan fanlar soni:</th>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <th>Mualliflik asosida tashkil etiladigan o'quv kursi va to'garaklar soni:</th>
+                                       <td>0</td>
+                                    </tr>
+                                    <tr>
+                                       <th>Umumiy shogirdalr soni:</th>
+                                       <td>0</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
                            </div>
-                        </div> -->
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
+            </div>
          </div>
 
+      </div>
 
-         <!-- Show content -->
-    
 
-         <script>
-               ( function ( document, window, index )
-               {
-                  var inputs = document.querySelectorAll( '.inputfile' );
-                  Array.prototype.forEach.call( inputs, function( input )
-                  {
-                     var label	 = input.nextElementSibling,
-                        labelVal = label.innerHTML;
+      <!-- Show content -->
 
-                     input.addEventListener( 'change', function( e )
-                     {
-                        var fileName = '';
-                        if( this.files && this.files.length > 1 )
-                           fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-                        else
-                           fileName = e.target.value.split( '\\' ).pop();
 
-                        if( fileName )
-                           label.querySelector( 'span' ).innerHTML = fileName;
-                        else
-                           label.innerHTML = labelVal;
-                     });
+      <script>
+         (function (document, window, index) {
+            var inputs = document.querySelectorAll('.inputfile');
+            Array.prototype.forEach.call(inputs, function (input) {
+               var label = input.nextElementSibling,
+                  labelVal = label.innerHTML;
 
-                     // Firefox bug fix
-                     input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
-                     input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
-                  });
-               }( document, window, 0 ));
-               // ( function ( document, window, index )
-               // {
-               //    var inputss = document.querySelectorAll( '.inputfileTwo' );
-               //    Array.prototype.forEach.call( inputss, function( inputt )
-               //    {
-               //       var labelTwo	 = inputt.nextElementSibling,
-               //          labelValTwo = labelTwo.innerHTML;
+               input.addEventListener('change', function (e) {
+                  var fileName = '';
+                  if (this.files && this.files.length > 1)
+                     fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                  else
+                     fileName = e.target.value.split('\\').pop();
 
-               //       inputt.addEventListener( 'change', function( e )
-               //       {
-               //          var fileNameTwo = '';
-               //          if( this.files && this.files.length > 1 )
-               //          fileNameTwo = ( this.getAttribute( 'data-multiple-caption-two' ) || '' ).replace( '{countTwo}', this.files.length );
-               //          else
-               //          fileNameTwo = e.target.value.split( '\\' ).pop();
+                  if (fileName)
+                     label.querySelector('span').innerHTML = fileName;
+                  else
+                     label.innerHTML = labelVal;
+               });
 
-               //          if( fileNameTwo )
-               //          labelTwo.querySelector( 'span' ).innerHTML = fileNameTwo;
-               //          else
-               //          labelTwo.innerHTML = labelValTwo;
-               //       });
+               // Firefox bug fix
+               input.addEventListener('focus', function () { input.classList.add('has-focus'); });
+               input.addEventListener('blur', function () { input.classList.remove('has-focus'); });
+            });
+         }(document, window, 0));
+         // ( function ( document, window, index )
+         // {
+         //    var inputss = document.querySelectorAll( '.inputfileTwo' );
+         //    Array.prototype.forEach.call( inputss, function( inputt )
+         //    {
+         //       var labelTwo	 = inputt.nextElementSibling,
+         //          labelValTwo = labelTwo.innerHTML;
 
-               //       // Firefox bug fix
-               //       inputt.addEventListener( 'focus', function(){ inputt.classList.add( 'has-focus' ); });
-               //       inputt.addEventListener( 'blur', function(){ inputt.classList.remove( 'has-focus' ); });
-               //    });
-               // }( document, window, 0 ));
+         //       inputt.addEventListener( 'change', function( e )
+         //       {
+         //          var fileNameTwo = '';
+         //          if( this.files && this.files.length > 1 )
+         //          fileNameTwo = ( this.getAttribute( 'data-multiple-caption-two' ) || '' ).replace( '{countTwo}', this.files.length );
+         //          else
+         //          fileNameTwo = e.target.value.split( '\\' ).pop();
 
-               function showDiv(divId, element)
-               {
-                  document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
-               }
+         //          if( fileNameTwo )
+         //          labelTwo.querySelector( 'span' ).innerHTML = fileNameTwo;
+         //          else
+         //          labelTwo.innerHTML = labelValTwo;
+         //       });
 
-               function showDivTwo(divId, element)
-               {
-                  document.getElementById(divId).style.display = element.value == 22 ? 'block' : 'none';
-               }
-         </script> 
+         //       // Firefox bug fix
+         //       inputt.addEventListener( 'focus', function(){ inputt.classList.add( 'has-focus' ); });
+         //       inputt.addEventListener( 'blur', function(){ inputt.classList.remove( 'has-focus' ); });
+         //    });
+         // }( document, window, 0 ));
+
+         function showDiv(divId, element) {
+            document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
+         }
+
+         function showDivTwo(divId, element) {
+            document.getElementById(divId).style.display = element.value == 22 ? 'block' : 'none';
+         }
+      </script>
 
       <!-- Bootstrap 4 -->
       <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- AdminLTE App -->
       <script src="../dist/js/adminlte.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"
+         integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig=="
+         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
       <script src="../plugins/sweetalert2/sweetalert2.min.js"></script>
       <script src="../plugins/toastr/toastr.min.js"></script>
 
-   </body>
+</body>
+
 </html>
