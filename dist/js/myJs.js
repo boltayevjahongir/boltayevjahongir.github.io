@@ -202,3 +202,71 @@ function done1(){
 
 }
 
+
+
+
+const ctx = document.getElementById('province-bar-chart');
+
+var barch = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    animation : {
+      onComplete : ()=>{
+        const btn = document.getElementById("pie-stunent-count");
+        btn.href=barch.toBase64Image()
+        btn.download = 'Ilmiy unvonlilar.png';
+      }
+   }
+  }
+});
+
+
+
+// Number counter
+  const counters = document.querySelectorAll('.top-counter');
+      const speed = 300;
+
+      counters.forEach( counter => {
+      const animate = () => {
+          const value = +counter.getAttribute('counter-value');
+          const data = +counter.innerText;
+          
+          const time = value / speed;
+          if(data < value) {
+              counter.innerText = Math.ceil(data + time);
+              setTimeout(animate, 1);
+              }else{
+              counter.innerText = value;
+              }
+          
+      }
+ 
+      animate();
+      });
+
+      // DOwnload table to excel
+      function ExportToExcel(filename, fn, dl) {
+        const type = 'xlsx';
+         var elt = document.getElementById(filename);
+         var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+         return dl ?
+             XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+             XLSX.writeFile(wb, fn || (`${filename}.` + (type || 'xlsx')));
+     }
+    
+
