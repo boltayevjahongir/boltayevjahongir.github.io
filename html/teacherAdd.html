@@ -149,28 +149,13 @@
                            </li>
                         </ul>
                      </li>
-                     <li class="nav-item ">
-                        <a href="#" class="nav-link active">
+                     <li class="nav-item">
+                        <a href="../html/teachers.html" class="nav-link">
                            <i class="nav-icon fas fa-user"></i>
                            <p>
                               O'qituvchi
-                              <i class="right fas fa-angle-left"></i>
                            </p>
                         </a>
-                        <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                              <a href="../html/teachers.html" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>O'qitvchi</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="../html/teacherAdd.html" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Ma'lumot qo'shish</p>
-                              </a>
-                           </li>
-                        </ul>
                      </li>
                      <li class="nav-item">
                         <a href="../sync.html" class="nav-link">
@@ -464,11 +449,18 @@
                                        <div class="grant-input">
                                           <h6>Tayanch doktorant</h6>
                                           <div class="row">
-                                             <div class="col-8">
-                                                <input type="text" name="grant-1" placeholder="Ism Familya">
+                                             <div class="col-6 d-flex justify-content-center">
+                                                <div class="number-input" id="counter_1_student">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                   <input id="disable-font_1_student" class="quantity" min="0" max="20 "name="quantity" value="0" type="number">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                 </div>
                                              </div>
-                                             <div class="col-4">
-                                                <button class="w-100 grant-button"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
+                                             <div class="col-3">
+                                                <button id="change-button_1_student" class="w-100 btn btn-info"><i class="fa-solid fa-rotate"></i> Ozgartish</button>
+                                             </div>
+                                             <div class="col-3">
+                                                <button id="save-button_1_student"  class="w-100 btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
                                              </div>
                                           </div>
                                        </div><hr>
@@ -477,11 +469,18 @@
                                        <div class="grant-input">
                                           <h6>Doktorant</h6>
                                           <div class="row">
-                                             <div class="col-8">
-                                                <input type="text" name="grant-1" placeholder="Ism Familya">
+                                             <div class="col-6 d-flex justify-content-center">
+                                                <div class="number-input" id="counter_2_student">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                   <input id="disable-font_2_student" class="quantity" min="0" max="20 "name="quantity" value="0" type="number">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                 </div>
                                              </div>
-                                             <div class="col-4">
-                                                <button class="w-100 grant-button"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
+                                             <div class="col-3">
+                                                <button id="change-button_2_student" class="w-100 btn btn-info"><i class="fa-solid fa-rotate"></i> Ozgartish</button>
+                                             </div>
+                                             <div class="col-3">
+                                                <button id="save-button_2_student"  class="w-100 btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
                                              </div>
                                           </div>
                                        </div><hr>
@@ -492,11 +491,18 @@
                                        <div class="grant-input">
                                           <h6>Mustaqil izlanuvchi</h6>
                                           <div class="row">
-                                             <div class="col-8">
-                                                <input type="text" name="grant-1" placeholder="Ism Familya">
+                                             <div class="col-6 d-flex justify-content-center">
+                                                <div class="number-input" id="counter_3_student">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                   <input id="disable-font_3_student" class="quantity" min="0" max="20 "name="quantity" value="0" type="number">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                 </div>
                                              </div>
-                                             <div class="col-4">
-                                                <button class="w-100 grant-button"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
+                                             <div class="col-3">
+                                                <button id="change-button_3_student" class="w-100 btn btn-info"><i class="fa-solid fa-rotate"></i> Ozgartish</button>
+                                             </div>
+                                             <div class="col-3">
+                                                <button id="save-button_3_student"  class="w-100 btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
                                              </div>
                                           </div>
                                        </div><hr>
@@ -505,11 +511,18 @@
                                        <div class="grant-input">
                                           <h6>Mazkur yilda himoya qilgan</h6>
                                           <div class="row">
-                                             <div class="col-8">
-                                                <input type="text" name="grant-1" placeholder="Ism Familya">
+                                             <div class="col-6 d-flex justify-content-center">
+                                                <div class="number-input" id="counter_4_student">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                   <input id="disable-font_4_student" class="quantity" min="0" max="20 "name="quantity" value="0" type="number">
+                                                   <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                 </div>
                                              </div>
-                                             <div class="col-4">
-                                                <button class="w-100 grant-button"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
+                                             <div class="col-3">
+                                                <button id="change-button_4_student" class="w-100 btn btn-info"><i class="fa-solid fa-rotate"></i> Ozgartish</button>
+                                             </div>
+                                             <div class="col-3">
+                                                <button id="save-button_4_student"  class="w-100 btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Saqlash</button>
                                              </div>
                                           </div>
                                        </div><hr>
@@ -726,7 +739,43 @@
                   document.getElementById("counter_grant_3").style.pointerEvents = 'auto';
                   document.getElementById("disable_grant_3").style.color = "black";
                }
-                
+
+               // Shogird
+               document.querySelector("#save-button_1_student").onclick = function(){
+                  document.getElementById("counter_1_student").style.pointerEvents = 'none';
+                  document.getElementById("disable-font_1_student").style.color = "#999999dd";
+               }
+               document.querySelector("#change-button_1_student").onclick = function(){
+                  document.getElementById("counter_1_student").style.pointerEvents = 'auto';
+                  document.getElementById("disable-font_1_student").style.color = "black";
+               }
+
+               document.querySelector("#save-button_2_student").onclick = function(){
+                  document.getElementById("counter_2_student").style.pointerEvents = 'none';
+                  document.getElementById("disable-font_2_student").style.color = "#999999dd";
+               }
+               document.querySelector("#change-button_2_student").onclick = function(){
+                  document.getElementById("counter_2_student").style.pointerEvents = 'auto';
+                  document.getElementById("disable-font_2_student").style.color = "black";
+               }
+
+               document.querySelector("#save-button_3_student").onclick = function(){
+                  document.getElementById("counter_3_student").style.pointerEvents = 'none';
+                  document.getElementById("disable-font_3_student").style.color = "#999999dd";
+               }
+               document.querySelector("#change-button_3_student").onclick = function(){
+                  document.getElementById("counter_3_student").style.pointerEvents = 'auto';
+                  document.getElementById("disable-font_3_student").style.color = "black";
+               }
+
+               document.querySelector("#save-button_4_student").onclick = function(){
+                  document.getElementById("counter_4_student").style.pointerEvents = 'none';
+                  document.getElementById("disable-font_4_student").style.color = "#999999dd";
+               }
+               document.querySelector("#change-button_4_student").onclick = function(){
+                  document.getElementById("counter_4_student").style.pointerEvents = 'auto';
+                  document.getElementById("disable-font_4_student").style.color = "black";
+               }
          </script> 
 
       <!-- Bootstrap 4 -->

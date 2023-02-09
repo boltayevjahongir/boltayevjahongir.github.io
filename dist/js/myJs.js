@@ -253,7 +253,6 @@ var barch = new Chart(ctx, {
               }else{
               counter.innerText = value;
               }
-          
       }
  
       animate();

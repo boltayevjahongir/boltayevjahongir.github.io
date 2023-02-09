@@ -30,7 +30,8 @@
     text-transform: lowercase;
 }
 
-.teacher-name h3::first-line {
+.teacher-name h3::first-line,
+.teacher-name p::first-line {
     text-transform: capitalize;
 }
 
