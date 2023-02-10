@@ -64,12 +64,12 @@ const employmentForm = new Chart(document.getElementById('pie-teacher-employment
  
 
 const academicDegree = new Chart(document.getElementById('pie-teacher-academicDegree'), {
-  type: 'doughnut',
+  type: 'bar',
   data: {
     labels: ['Katta ilmiy xodim', 'Professor', 'Dotsent', 'Unvonsiz',],
     datasets: [
       {
-        label: 'Talabalar soni',
+        legend: 'hello',
         data: [7, 85, 148, 790],
         backgroundColor: [
           
@@ -87,7 +87,7 @@ const academicDegree = new Chart(document.getElementById('pie-teacher-academicDe
     maintainAspectRatio: false,
     plugins: {
       tooltip:{
-        enabled:true
+        enabled:true,
       },
       datalabels:{
           clamp: true,
@@ -111,7 +111,7 @@ const academicDegree = new Chart(document.getElementById('pie-teacher-academicDe
         }
       },
       legend: {
-        position: 'bottom',
+        display: false
       },
       title: {
           display: true,
@@ -135,7 +135,7 @@ function done1(){
 }
 
 const academicRank = new Chart(document.getElementById('pie-teacher-academicRank'), {
-  type: 'doughnut',
+  type: 'bar',
   data: {
     labels: ['Fan doktori, DSc', 'Fan nomzodi, PhD', 'Darajasiz', ],
     datasets: [
@@ -179,7 +179,7 @@ const academicRank = new Chart(document.getElementById('pie-teacher-academicRank
         }
       },
       legend: {
-        position: 'bottom',
+        display: false
       },
       title: {
           display: true,
@@ -203,69 +203,14 @@ function done1(){
 }
 
 
-
-
-const ctx = document.getElementById('province-bar-chart');
-
-var barch = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    },
-    animation : {
-      onComplete : ()=>{
-        const btn = document.getElementById("pie-stunent-count");
-        btn.href=barch.toBase64Image()
-        btn.download = 'Ilmiy unvonlilar.png';
-      }
-   }
-  }
-});
-
-
-
-// Number counter
-  const counters = document.querySelectorAll('.top-counter');
-      const speed = 300;
-
-      counters.forEach( counter => {
-      const animate = () => {
-          const value = +counter.getAttribute('counter-value');
-          const data = +counter.innerText;
-          
-          const time = value / speed;
-          if(data < value) {
-              counter.innerText = Math.ceil(data + time);
-              setTimeout(animate, 1);
-              }else{
-              counter.innerText = value;
-              }
-      }
- 
-      animate();
-      });
-
       // DOwnload table to excel
-      function ExportToExcel(filename, fn, dl) {
-        const type = 'xlsx';
-         var elt = document.getElementById(filename);
-         var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
-         return dl ?
-             XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-             XLSX.writeFile(wb, fn || (`${filename}.` + (type || 'xlsx')));
-     }
+function ExportToExcel(filename, fn, dl) {
+  const type = 'xlsx';
+  var elt = document.getElementById(filename);
+  var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+  return dl ?
+    XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+    XLSX.writeFile(wb, fn || (`${filename}.` + (type || 'xlsx')));
+} 
     
 
