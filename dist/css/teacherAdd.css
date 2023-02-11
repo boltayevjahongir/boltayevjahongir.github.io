@@ -171,7 +171,7 @@ input[type=number]::-webkit-outer-spin-button {
   
 .number-input button {
     outline:none;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     background-color: transparent;
     border: none;
     align-items: center;
@@ -235,7 +235,3 @@ input[type=number]::-webkit-outer-spin-button {
 .grant-input h6 {
     text-align: center;
 }
-
-/* #disable-font_1{
-    color: #191919 !important;
-} */

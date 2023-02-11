@@ -9,10 +9,11 @@
     width: 100%;
 }
 
-.bb-radius{
-    border-radius: 6px;
-}
-
+@media only screen and (max-width: 600px) {
+    .p-sm-0{
+        padding: 0 !important;
+    }
+  }
 .teacher-image img{
     background: linear-gradient(#fff, #fff) padding-box,
     linear-gradient(45deg, #5433FF, #20BDFF, #A5FECB) border-box;
