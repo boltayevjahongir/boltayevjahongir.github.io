@@ -41,104 +41,143 @@
                 }).trigger("change");
                 
 
-               document.querySelector("#save-button_1").onclick = function(){
-                  document.getElementById("counter_1").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_1").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_1").onclick = function(){
-                  document.getElementById("counter_1").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_1").style.color = "black";
-               }
+                document.querySelector("#change-button_1").onclick = function() {
+                  const counter = document.getElementById("counter_1");
+                  const font = document.getElementById("disable-font_1");
+               
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               };
 
-               document.querySelector("#save-button_2").onclick = function(){
-                  document.getElementById("counter_2").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_2").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_2").onclick = function(){
-                  document.getElementById("counter_2").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_2").style.color = "black";
-               }
+               document.querySelector("#change-button_2").onclick = function() {
+                  const counter = document.getElementById("counter_2");
+                  const font = document.getElementById("disable-font_2");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               };   
 
-               document.querySelector("#save-button_3").onclick = function(){
-                  document.getElementById("counter_3").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_3").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_3").onclick = function(){
-                  document.getElementById("counter_3").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_3").style.color = "black";
-               }
+               document.querySelector("#change-button_3").onclick = function() {
+                  const counter = document.getElementById("counter_3");
+                  const font = document.getElementById("disable-font_3");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               }; 
 
-               document.querySelector("#save-button_4").onclick = function(){
-                  document.getElementById("counter_4").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_4").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_4").onclick = function(){
-                  document.getElementById("counter_4").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_4").style.color = "black";
-               }
+               document.querySelector("#change-button_4").onclick = function() {
+                  const counter = document.getElementById("counter_4");
+                  const font = document.getElementById("disable-font_4");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               }; 
 
                // Grand section js
 
-               document.querySelector("#save_grant_1").onclick = function(){
-                  document.getElementById("counter_grant_1").style.pointerEvents = 'none';
-                  document.getElementById("disable_grant_1").style.color = "#999999dd";
-               }
-               document.querySelector("#change_grant_1").onclick = function(){
-                  document.getElementById("counter_grant_1").style.pointerEvents = 'auto';
-                  document.getElementById("disable_grant_1").style.color = "black";
-               }
+               document.querySelector("#change_grant_1").onclick = function() {
+                  const counter = document.getElementById("counter_grant_1");
+                  const font = document.getElementById("disable_grant_1");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               }; 
+               document.querySelector("#change_grant_2").onclick = function() {
+                  const counter = document.getElementById("counter_grant_2");
+                  const font = document.getElementById("disable_grant_2");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               }; 
 
-               document.querySelector("#save_grant_2").onclick = function(){
-                  document.getElementById("counter_grant_2").style.pointerEvents = 'none';
-                  document.getElementById("disable_grant_2").style.color = "#999999dd";
-               }
-               document.querySelector("#change_grant_2").onclick = function(){
-                  document.getElementById("counter_grant_2").style.pointerEvents = 'auto';
-                  document.getElementById("disable_grant_2").style.color = "black";
-               }
-
-               document.querySelector("#save_grant_3").onclick = function(){
-                  document.getElementById("counter_grant_3").style.pointerEvents = 'none';
-                  document.getElementById("disable_grant_3").style.color = "#999999dd";
-               }
-               document.querySelector("#change_grant_3").onclick = function(){
-                  document.getElementById("counter_grant_3").style.pointerEvents = 'auto';
-                  document.getElementById("disable_grant_3").style.color = "black";
-               }
-
+               document.querySelector("#change_grant_3").onclick = function() {
+                  const counter = document.getElementById("counter_grant_3");
+                  const font = document.getElementById("disable_grant_3");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               };
                // Shogird
-               document.querySelector("#save-button_1_student").onclick = function(){
-                  document.getElementById("counter_1_student").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_1_student").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_1_student").onclick = function(){
-                  document.getElementById("counter_1_student").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_1_student").style.color = "black";
-               }
-
-               document.querySelector("#save-button_2_student").onclick = function(){
-                  document.getElementById("counter_2_student").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_2_student").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_2_student").onclick = function(){
-                  document.getElementById("counter_2_student").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_2_student").style.color = "black";
-               }
-
-               document.querySelector("#save-button_3_student").onclick = function(){
-                  document.getElementById("counter_3_student").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_3_student").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_3_student").onclick = function(){
-                  document.getElementById("counter_3_student").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_3_student").style.color = "black";
-               }
-
-               document.querySelector("#save-button_4_student").onclick = function(){
-                  document.getElementById("counter_4_student").style.pointerEvents = 'none';
-                  document.getElementById("disable-font_4_student").style.color = "#999999dd";
-               }
-               document.querySelector("#change-button_4_student").onclick = function(){
-                  document.getElementById("counter_4_student").style.pointerEvents = 'auto';
-                  document.getElementById("disable-font_4_student").style.color = "black";
+               document.querySelector("#change-button_1_student").onclick = function() {
+                  const counter = document.getElementById("counter_1_student");
+                  const font = document.getElementById("disable-font_1_student");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               };
+               document.querySelector("#change-button_2_student").onclick = function() {
+                  const counter = document.getElementById("counter_2_student");
+                  const font = document.getElementById("disable-font_2_student");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               };
+               document.querySelector("#change-button_3_student").onclick = function() {
+                  const counter = document.getElementById("counter_3_student");
+                  const font = document.getElementById("disable-font_3_student");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
+               };
+               document.querySelector("#change-button_4_student").onclick = function() {
+                  const counter = document.getElementById("counter_4_student");
+                  const font = document.getElementById("disable-font_4_student");
+                  
+                  if (counter.style.pointerEvents === "auto") {
+                     counter.style.pointerEvents = "none";
+                     font.style.color = "#999999dd";
+                  } else {
+                     counter.style.pointerEvents = "auto";
+                     font.style.color = "black";
+                  }
                }
