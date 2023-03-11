@@ -1,1384 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Terdu 360</title>
-		<!--projectdescription--><meta name="description" content="New 3Sixty Virtual Tour Project"><!--projectdescription-end-->
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
-		
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-		<link rel="stylesheet" type="text/css" href="style.css">
-
-
-		<!-- faviocn -->
-		<link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-		<link rel="manifest" href="./favicon_io/site.webmanifest">
-		
-		<!-- Insert this line above script imports  -->
-		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-		
-		<script src="imagedata.js"></script>
-		<script src="jquery.js"></script>
-		<script src="three.min.js"></script>
-		<script src="panolens.min.js"></script>
-		
-		<!-- Insert this line after script imports -->
-		<script>if (window.module) module = window.module;</script>
-		
-		<style>
-		
-			
-						
-			/* SCROLLBAR STYLING */
-			/* width */
-			::-webkit-scrollbar {
-				width: 0.25em;
-				height: 0.25em;
-			}
-			/* Track */
-			::-webkit-scrollbar-track {
-				background: #2c3643; 
-			}
-			/* Handle */
-			::-webkit-scrollbar-thumb {
-				background: #0d9e59; 
-				transition: background .5s;
-			}
-			/* Handle on hover */
-			::-webkit-scrollbar-thumb:hover {
-				background: #00e075; 
-			}
-
-
-			html, body {
-				margin: 0;
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				background-color: #000;
-				color: black;
-			}
-
-			a:link, a:visited{
-				color: #bdc3c7;	
-			}
-
-			.fullwrapper{
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background-color: black;
-			}
-			
-			#container {
-                width: 100%;
-                height: 100%;
-            }
-			
-			#tmp{
-				position: fixed;
-				top: 0;
-				left: 0; 
-				right: 0;
-				bottom: 0;
-				padding: 3em;
-				background-color: rgba(0,0,0,.5);
-				backdrop-filter: blur(5px);
-				display: none;
-			}
-		</style>
-	</head>
-	<body id="body">
-	    <div id="container" style="color: black;"></div>
-    	
-		
-		
-		<!--customhtml--><div class='customhotspot' id='PANO_20230108_105229_7'></div><div class='customhotspot' id='PANO_20230107_160631_2'></div><div class='customhotspot' id='PANO_20230107_162254_5'></div><div class='customhotspot' id='PANO_20230108_110219_11'></div><div class='customhotspot' id='PANO_20230108_105629_10'></div><div class='customhotspot' id='PANO_20230107_162743_6'></div><div class='customhotspot' id='PANO_20230107_163309_7'></div><div class='customhotspot' id='PANO_20230107_164002_8'></div><div class='customhotspot' id='PANO_20230107_164448_9'></div><div class='customhotspot' id='PANO_20230107_165038_10'></div><div class='customhotspot' id='PANO_20230107_165527_11'></div><div class='customhotspot' id='PANO_20230107_170248_13'></div><div class='customhotspot' id='PANO_20230107_171131_14'></div><div class='customhotspot' id='PANO_20230108_110557_12'></div><div class='customhotspot' id='PANO_20230107_171522_15'></div><div class='customhotspot' id='PANO_20230107_171940_16'></div><div class='customhotspot' id='atf'></div><div class='customhotspot' id='atf_main'></div><div class='customhotspot' id='atf_maruzxona'></div><div class='customhotspot' id='atf_yol_1'></div><div class='customhotspot' id='atf_yol_2'></div><div class='customhotspot' id='inyaz_tash'></div><div class='customhotspot' id='inyaz_yol'></div><div class='customhotspot' id='Iqisod_tashqari'></div><div class='customhotspot' id='iqtisod_ichkari'></div><div class='customhotspot' id='iqtisod_orqa'></div><div class='customhotspot' id='jismoniy_ichkari'></div><div class='customhotspot' id='maktabgacha_tash'></div><div class='customhotspot' id='maktabgacha_yon'></div><div class='customhotspot' id='sport_zal'></div><div class='customhotspot' id='sport_zal_ichi'></div><div class='customhotspot' id='stadion'><div onclick='chclickinfospotstadion0();' id='infospotstadion0' style='position: fixed; top: 0; left: 0; cursor: pointer;'><img src='customhotspots/location.png' style='width: 64px; height: 64px;'></div><div onclick='chclickinfospotstadion1();' id='infospotstadion1' style='position: fixed; top: 0; left: 0; cursor: pointer;'><img src='customhotspots/location.png' style='width: 64px; height: 64px;'></div><div onclick='chclickinfospotstadion2();' id='infospotstadion2' style='position: fixed; top: 0; left: 0; cursor: pointer;'><img src='customhotspots/location.png' style='width: 64px; height: 64px;'></div></div><div class='customhotspot' id='stadion_start'></div><div class='customhotspot' id='uzlet_ichkari'></div><div class='customhotspot' id='uzlet_orqa'></div><div class='customhotspot' id='yotoqxona_6'></div><div class='customhotspot' id='yotoqoxona_4'></div><div class='customhotspot' id='yotoqxona_3'></div><div class='customhotspot' id='yotoqxona_otish_joy_3_4'></div><div class='customhotspot' id='yotoqxona_yolak3_4'></div><div class='customhotspot' id='inyaz_ichkari'></div><div class='customhotspot' id='test'></div><!--customhtml-end-->
-		
-		<div id="tmp">
-			<div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;" id="tmpcontent"></div>
-			<div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
-		</div>
-
-
-		<div id="loading" class="fullwrapper" style="display: table; width: 100%; height: 100%;">
-    		<div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
-    			<!--loadingtext-->Yuklanmoqda...<!--loadingtext-end-->
-    		</div>
-    	</div>
-		
-    	<script>
-			
-            var container = document.querySelector( '#container' );
-			/*panolens*/
-
-var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  output: 'console' , autoHideInfospot: false, } );
-
-/*panolens-end*/
-			
-			viewer.addUpdateCallback(function(){});
-			
-			/*panoramas*/
-var PANO_20230108_105229_7 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230108_105229_7.jpg" );
-			PANO_20230108_105229_7.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230108_105229_7.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230108_105229_7.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230108_105229_70 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230108_105229_70.position.set( 4921.13, -815.97, 201.97 );
-					PANO_20230108_105229_7.add(infospotPANO_20230108_105229_70);
-infospotPANO_20230108_105229_70.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_160631_2');
-});
-var infospotPANO_20230108_105229_71 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
-					infospotPANO_20230108_105229_71.position.set( 202.34, 88.53, -4985.92 );
-					PANO_20230108_105229_7.add(infospotPANO_20230108_105229_71);
-infospotPANO_20230108_105229_71.addEventListener('click', function(){
-ChangePanorama('test');
-});
-viewer.add( PANO_20230108_105229_7 );
-var PANO_20230107_160631_2 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_160631_2.jpg" );
-			PANO_20230107_160631_2.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_160631_2.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_160631_2.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_160631_20 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_160631_20.position.set( -4799.53, -1359.34, 155.27 );
-					PANO_20230107_160631_2.add(infospotPANO_20230107_160631_20);
-infospotPANO_20230107_160631_20.addEventListener('click', function(){
-ChangePanorama('PANO_20230108_105229_7');
-});
-var infospotPANO_20230107_160631_21 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_160631_21.position.set( 478.06, -792.83, 4911.27 );
-					PANO_20230107_160631_2.add(infospotPANO_20230107_160631_21);
-infospotPANO_20230107_160631_21.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_162254_5');
-});
-var infospotPANO_20230107_160631_22 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_160631_22.position.set( -150.79, -582.23, -4954.20 );
-					PANO_20230107_160631_2.add(infospotPANO_20230107_160631_22);
-infospotPANO_20230107_160631_22.addEventListener('click', function(){
-ChangePanorama('PANO_20230108_110219_11');
-});
-var infospotPANO_20230107_160631_23 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_160631_23.position.set( 4954.11, -458.06, -432.99 );
-					PANO_20230107_160631_2.add(infospotPANO_20230107_160631_23);
-infospotPANO_20230107_160631_23.addEventListener('click', function(){
-ChangePanorama('PANO_20230108_105629_10');
-});
-viewer.add( PANO_20230107_160631_2 );
-var PANO_20230107_162254_5 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_162254_5.jpg" );
-			PANO_20230107_162254_5.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_162254_5.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_162254_5.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_162254_50 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_162254_50.position.set( 19.36, -1527.61, -4759.20 );
-					PANO_20230107_162254_5.add(infospotPANO_20230107_162254_50);
-infospotPANO_20230107_162254_50.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_160631_2');
-});
-var infospotPANO_20230107_162254_51 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_162254_51.position.set( 273.34, -1723.22, 4675.24 );
-					PANO_20230107_162254_5.add(infospotPANO_20230107_162254_51);
-infospotPANO_20230107_162254_51.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_162743_6');
-});
-var infospotPANO_20230107_162254_52 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_162254_52.position.set( 4889.70, -1003.98, 88.26 );
-					PANO_20230107_162254_5.add(infospotPANO_20230107_162254_52);
-infospotPANO_20230107_162254_52.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_163309_7');
-});
-viewer.add( PANO_20230107_162254_5 );
-var PANO_20230108_110219_11 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230108_110219_11.jpg" );
-			PANO_20230108_110219_11.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230108_110219_11.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230108_110219_11.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230108_110219_110 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230108_110219_110.position.set( -138.21, -1264.38, 4827.21 );
-					PANO_20230108_110219_11.add(infospotPANO_20230108_110219_110);
-infospotPANO_20230108_110219_110.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_160631_2');
-});
-var infospotPANO_20230108_110219_111 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230108_110219_111.position.set( 4892.42, -965.20, -183.39 );
-					PANO_20230108_110219_11.add(infospotPANO_20230108_110219_111);
-infospotPANO_20230108_110219_111.addEventListener('click', function(){
-ChangePanorama('PANO_20230108_110557_12');
-});
-viewer.add( PANO_20230108_110219_11 );
-var PANO_20230108_105629_10 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230108_105629_10.jpg" );
-			PANO_20230108_105629_10.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230108_105629_10.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230108_105629_10.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230108_105629_100 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotPANO_20230108_105629_100.position.set( -4952.58, -521.57, 318.78 );
-					PANO_20230108_105629_10.add(infospotPANO_20230108_105629_100);
-infospotPANO_20230108_105629_100.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_160631_2');
-});
-viewer.add( PANO_20230108_105629_10 );
-var PANO_20230107_162743_6 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_162743_6.jpg" );
-			PANO_20230107_162743_6.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_162743_6.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_162743_6.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_162743_60 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_162743_60.position.set( -779.80, -1001.16, 4825.60 );
-					PANO_20230107_162743_6.add(infospotPANO_20230107_162743_60);
-infospotPANO_20230107_162743_60.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_164002_8');
-});
-var infospotPANO_20230107_162743_61 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_162743_61.position.set( -4893.53, -990.11, -67.76 );
-					PANO_20230107_162743_6.add(infospotPANO_20230107_162743_61);
-infospotPANO_20230107_162743_61.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_164002_8');
-});
-viewer.add( PANO_20230107_162743_6 );
-var PANO_20230107_163309_7 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_163309_7.jpg" );
-			PANO_20230107_163309_7.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_163309_7.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_163309_7.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_163309_70 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_163309_70.position.set( 4742.28, -1571.53, 61.95 );
-					PANO_20230107_163309_7.add(infospotPANO_20230107_163309_70);
-infospotPANO_20230107_163309_70.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171131_14');
-});
-var infospotPANO_20230107_163309_71 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_163309_71.position.set( 33.95, -1214.33, 4846.78 );
-					PANO_20230107_163309_7.add(infospotPANO_20230107_163309_71);
-infospotPANO_20230107_163309_71.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_164002_8');
-});
-var infospotPANO_20230107_163309_72 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_163309_72.position.set( 416.11, -1387.18, -4778.01 );
-					PANO_20230107_163309_7.add(infospotPANO_20230107_163309_72);
-infospotPANO_20230107_163309_72.addEventListener('click', function(){
-ChangePanorama('PANO_20230108_110557_12');
-});
-var infospotPANO_20230107_163309_73 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_163309_73.position.set( -4033.16, -1611.19, 2463.86 );
-					PANO_20230107_163309_7.add(infospotPANO_20230107_163309_73);
-infospotPANO_20230107_163309_73.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_162254_5');
-});
-viewer.add( PANO_20230107_163309_7 );
-var PANO_20230107_164002_8 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_164002_8.jpg" );
-			PANO_20230107_164002_8.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_164002_8.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_164002_8.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_164002_80 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_164002_80.position.set( -4818.87, -1217.74, -520.47 );
-					PANO_20230107_164002_8.add(infospotPANO_20230107_164002_80);
-infospotPANO_20230107_164002_80.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_163309_7');
-});
-var infospotPANO_20230107_164002_81 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotPANO_20230107_164002_81.position.set( -1933.81, 99.60, -4601.88 );
-					PANO_20230107_164002_8.add(infospotPANO_20230107_164002_81);
-infospotPANO_20230107_164002_81.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_165527_11');
-});
-var infospotPANO_20230107_164002_82 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_164002_82.position.set( -677.47, -1264.60, 4780.64 );
-					PANO_20230107_164002_8.add(infospotPANO_20230107_164002_82);
-infospotPANO_20230107_164002_82.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_164448_9');
-});
-viewer.add( PANO_20230107_164002_8 );
-var PANO_20230107_164448_9 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_164448_9.jpg" );
-			PANO_20230107_164448_9.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_164448_9.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_164448_9.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_164448_90 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_164448_90.position.set( 4840.91, -1219.68, -117.36 );
-					PANO_20230107_164448_9.add(infospotPANO_20230107_164448_90);
-infospotPANO_20230107_164448_90.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_165038_10');
-});
-var infospotPANO_20230107_164448_91 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_164448_91.position.set( 3366.53, -976.30, 3553.38 );
-					PANO_20230107_164448_9.add(infospotPANO_20230107_164448_91);
-infospotPANO_20230107_164448_91.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_164002_8');
-});
-viewer.add( PANO_20230107_164448_9 );
-var PANO_20230107_165038_10 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_165038_10.jpg" );
-			PANO_20230107_165038_10.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_165038_10.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_165038_10.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_165038_100 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotPANO_20230107_165038_100.position.set( -4974.42, -126.34, -393.38 );
-					PANO_20230107_165038_10.add(infospotPANO_20230107_165038_100);
-infospotPANO_20230107_165038_100.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_164448_9');
-});
-viewer.add( PANO_20230107_165038_10 );
-var PANO_20230107_165527_11 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_165527_11.jpg" );
-			PANO_20230107_165527_11.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_165527_11.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_165527_11.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_165527_110 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_165527_110.position.set( 4929.92, -783.79, -156.53 );
-					PANO_20230107_165527_11.add(infospotPANO_20230107_165527_110);
-infospotPANO_20230107_165527_110.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_170248_13');
-});
-var infospotPANO_20230107_165527_111 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_165527_111.position.set( -707.09, -461.69, -4919.51 );
-					PANO_20230107_165527_11.add(infospotPANO_20230107_165527_111);
-infospotPANO_20230107_165527_111.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_164002_8');
-});
-viewer.add( PANO_20230107_165527_11 );
-var PANO_20230107_170248_13 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_170248_13.jpg" );
-			PANO_20230107_170248_13.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_170248_13.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_170248_13.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_170248_130 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotPANO_20230107_170248_130.position.set( -4948.84, -665.18, 65.87 );
-					PANO_20230107_170248_13.add(infospotPANO_20230107_170248_130);
-infospotPANO_20230107_170248_130.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_165527_11');
-});
-viewer.add( PANO_20230107_170248_13 );
-var PANO_20230107_171131_14 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_171131_14.jpg" );
-			PANO_20230107_171131_14.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_171131_14.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_171131_14.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_171131_140 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171131_140.position.set( 267.47, -1290.74, -4813.00 );
-					PANO_20230107_171131_14.add(infospotPANO_20230107_171131_140);
-infospotPANO_20230107_171131_140.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_163309_7');
-});
-var infospotPANO_20230107_171131_141 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171131_141.position.set( 4706.64, -1665.27, -82.18 );
-					PANO_20230107_171131_14.add(infospotPANO_20230107_171131_141);
-infospotPANO_20230107_171131_141.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171522_15');
-});
-viewer.add( PANO_20230107_171131_14 );
-var PANO_20230108_110557_12 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230108_110557_12.jpg" );
-			PANO_20230108_110557_12.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230108_110557_12.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230108_110557_12.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230108_110557_120 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230108_110557_120.position.set( -29.84, -1197.55, 4851.73 );
-					PANO_20230108_110557_12.add(infospotPANO_20230108_110557_120);
-infospotPANO_20230108_110557_120.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_163309_7');
-});
-var infospotPANO_20230108_110557_121 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230108_110557_121.position.set( -4832.86, -1217.58, -282.21 );
-					PANO_20230108_110557_12.add(infospotPANO_20230108_110557_121);
-infospotPANO_20230108_110557_121.addEventListener('click', function(){
-ChangePanorama('PANO_20230108_110219_11');
-});
-var infospotPANO_20230108_110557_122 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230108_110557_122.position.set( 4860.53, -1155.42, 69.89 );
-					PANO_20230108_110557_12.add(infospotPANO_20230108_110557_122);
-infospotPANO_20230108_110557_122.addEventListener('click', function(){
-ChangePanorama('maktabgacha_yon');
-});
-viewer.add( PANO_20230108_110557_12 );
-var PANO_20230107_171522_15 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_171522_15.jpg" );
-			PANO_20230107_171522_15.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_171522_15.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_171522_15.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_171522_150 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171522_150.position.set( 4724.64, -1570.05, 408.92 );
-					PANO_20230107_171522_15.add(infospotPANO_20230107_171522_150);
-infospotPANO_20230107_171522_150.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171940_16');
-});
-var infospotPANO_20230107_171522_151 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171522_151.position.set( 377.72, -1242.14, -4820.93 );
-					PANO_20230107_171522_15.add(infospotPANO_20230107_171522_151);
-infospotPANO_20230107_171522_151.addEventListener('click', function(){
-ChangePanorama('iqtisod_orqa');
-});
-var infospotPANO_20230107_171522_152 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171522_152.position.set( -653.73, -1560.93, 4698.51 );
-					PANO_20230107_171522_15.add(infospotPANO_20230107_171522_152);
-infospotPANO_20230107_171522_152.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171131_14');
-});
-viewer.add( PANO_20230107_171522_15 );
-var PANO_20230107_171940_16 = new PANOLENS.ImagePanorama( "panoramas/PANO_20230107_171940_16.jpg" );
-			PANO_20230107_171940_16.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			PANO_20230107_171940_16.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			PANO_20230107_171940_16.addEventListener('click', function(e){
-			});
-
-var infospotPANO_20230107_171940_160 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171940_160.position.set( -377.00, -913.57, -4892.55 );
-					PANO_20230107_171940_16.add(infospotPANO_20230107_171940_160);
-infospotPANO_20230107_171940_160.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171522_15');
-});
-var infospotPANO_20230107_171940_161 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171940_161.position.set( 4863.79, -1074.69, -314.24 );
-					PANO_20230107_171940_16.add(infospotPANO_20230107_171940_161);
-infospotPANO_20230107_171940_161.addEventListener('click', function(){
-ChangePanorama('Iqisod_tashqari');
-});
-var infospotPANO_20230107_171940_162 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotPANO_20230107_171940_162.position.set( 221.12, -1440.90, 4773.08 );
-					PANO_20230107_171940_16.add(infospotPANO_20230107_171940_162);
-infospotPANO_20230107_171940_162.addEventListener('click', function(){
-ChangePanorama('inyaz_yol');
-});
-viewer.add( PANO_20230107_171940_16 );
-var atf = new PANOLENS.ImagePanorama( "panoramas/atf.jpg" );
-			atf.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			atf.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			atf.addEventListener('click', function(e){
-			});
-
-var infospotatf0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotatf0.position.set( 899.97, -1564.32, -4658.24 );
-					atf.add(infospotatf0);
-infospotatf0.addEventListener('click', function(){
-ChangePanorama('stadion');
-});
-var infospotatf1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotatf1.position.set( 4731.81, -1573.32, 249.12 );
-					atf.add(infospotatf1);
-infospotatf1.addEventListener('click', function(){
-ChangePanorama('atf_main');
-});
-viewer.add( atf );
-var atf_main = new PANOLENS.ImagePanorama( "panoramas/atf_main.jpg" );
-			atf_main.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			atf_main.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			atf_main.addEventListener('click', function(e){
-			});
-
-var infospotatf_main0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotatf_main0.position.set( -4943.97, -514.44, -499.24 );
-					atf_main.add(infospotatf_main0);
-infospotatf_main0.addEventListener('click', function(){
-ChangePanorama('atf');
-});
-var infospotatf_main1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotatf_main1.position.set( 90.10, -1476.85, 4769.80 );
-					atf_main.add(infospotatf_main1);
-infospotatf_main1.addEventListener('click', function(){
-ChangePanorama('atf_yol_1');
-});
-viewer.add( atf_main );
-var atf_maruzxona = new PANOLENS.ImagePanorama( "panoramas/atf_maruzxona.jpg" );
-			atf_maruzxona.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			atf_maruzxona.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			atf_maruzxona.addEventListener('click', function(e){
-			});
-
-var infospotatf_maruzxona0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotatf_maruzxona0.position.set( -1022.40, -408.14, -4875.98 );
-					atf_maruzxona.add(infospotatf_maruzxona0);
-infospotatf_maruzxona0.addEventListener('click', function(){
-ChangePanorama('atf_yol_2');
-});
-viewer.add( atf_maruzxona );
-var atf_yol_1 = new PANOLENS.ImagePanorama( "panoramas/atf_yol_1.jpg" );
-			atf_yol_1.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			atf_yol_1.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			atf_yol_1.addEventListener('click', function(e){
-			});
-
-var infospotatf_yol_10 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotatf_yol_10.position.set( -55.97, -1611.00, -4728.03 );
-					atf_yol_1.add(infospotatf_yol_10);
-infospotatf_yol_10.addEventListener('click', function(){
-ChangePanorama('atf_main');
-});
-var infospotatf_yol_11 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotatf_yol_11.position.set( 4635.86, -1824.69, 310.56 );
-					atf_yol_1.add(infospotatf_yol_11);
-infospotatf_yol_11.addEventListener('click', function(){
-ChangePanorama('atf_yol_2');
-});
-viewer.add( atf_yol_1 );
-var atf_yol_2 = new PANOLENS.ImagePanorama( "panoramas/atf_yol_2.jpg" );
-			atf_yol_2.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			atf_yol_2.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			atf_yol_2.addEventListener('click', function(e){
-			});
-
-var infospotatf_yol_20 = new PANOLENS.Infospot( 512, hotspotIcons[12].data, true );
-					infospotatf_yol_20.position.set( 4233.11, -2012.86, 1717.05 );
-					atf_yol_2.add(infospotatf_yol_20);
-infospotatf_yol_20.addEventListener('click', function(){
-ChangePanorama('atf_maruzxona');
-});
-var infospotatf_yol_21 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotatf_yol_21.position.set( -385.37, -1472.16, 4755.65 );
-					atf_yol_2.add(infospotatf_yol_21);
-infospotatf_yol_21.addEventListener('click', function(){
-ChangePanorama('atf_yol_1');
-});
-viewer.add( atf_yol_2 );
-var inyaz_tash = new PANOLENS.ImagePanorama( "panoramas/inyaz_tash.jpg" );
-			inyaz_tash.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			inyaz_tash.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			inyaz_tash.addEventListener('click', function(e){
-			});
-
-var infospotinyaz_tash0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotinyaz_tash0.position.set( 8.25, -1092.55, -4876.27 );
-					inyaz_tash.add(infospotinyaz_tash0);
-infospotinyaz_tash0.addEventListener('click', function(){
-ChangePanorama('Iqisod_tashqari');
-});
-var infospotinyaz_tash1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotinyaz_tash1.position.set( 4869.92, -1126.37, -1.04 );
-					inyaz_tash.add(infospotinyaz_tash1);
-infospotinyaz_tash1.addEventListener('click', function(){
-ChangePanorama('inyaz_ichkari');
-});
-var infospotinyaz_tash2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotinyaz_tash2.position.set( 31.65, -1504.99, 4764.93 );
-					inyaz_tash.add(infospotinyaz_tash2);
-infospotinyaz_tash2.addEventListener('click', function(){
-ChangePanorama('uzlet_ichkari');
-});
-var infospotinyaz_tash3 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotinyaz_tash3.position.set( -4905.22, -947.88, 5.05 );
-					inyaz_tash.add(infospotinyaz_tash3);
-infospotinyaz_tash3.addEventListener('click', function(){
-ChangePanorama('inyaz_yol');
-});
-viewer.add( inyaz_tash );
-var inyaz_yol = new PANOLENS.ImagePanorama( "panoramas/inyaz_yol.jpg" );
-			inyaz_yol.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			inyaz_yol.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			inyaz_yol.addEventListener('click', function(e){
-			});
-
-var infospotinyaz_yol0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotinyaz_yol0.position.set( 382.60, -1265.83, -4813.99 );
-					inyaz_yol.add(infospotinyaz_yol0);
-infospotinyaz_yol0.addEventListener('click', function(){
-ChangePanorama('inyaz_tash');
-});
-var infospotinyaz_yol1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotinyaz_yol1.position.set( 4650.06, -1803.05, 191.84 );
-					inyaz_yol.add(infospotinyaz_yol1);
-infospotinyaz_yol1.addEventListener('click', function(){
-ChangePanorama('stadion_start');
-});
-var infospotinyaz_yol2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotinyaz_yol2.position.set( -4777.69, -1406.19, -319.84 );
-					inyaz_yol.add(infospotinyaz_yol2);
-infospotinyaz_yol2.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171940_16');
-});
-viewer.add( inyaz_yol );
-var Iqisod_tashqari = new PANOLENS.ImagePanorama( "panoramas/Iqisod_tashqari.jpg" );
-			Iqisod_tashqari.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			Iqisod_tashqari.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			Iqisod_tashqari.addEventListener('click', function(e){
-			});
-
-var infospotIqisod_tashqari0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotIqisod_tashqari0.position.set( -4844.88, -1220.55, 36.87 );
-					Iqisod_tashqari.add(infospotIqisod_tashqari0);
-infospotIqisod_tashqari0.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171940_16');
-});
-var infospotIqisod_tashqari1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotIqisod_tashqari1.position.set( 714.23, -907.15, -4854.89 );
-					Iqisod_tashqari.add(infospotIqisod_tashqari1);
-infospotIqisod_tashqari1.addEventListener('click', function(){
-ChangePanorama('iqtisod_ichkari');
-});
-var infospotIqisod_tashqari2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotIqisod_tashqari2.position.set( 4826.47, -1286.41, -33.73 );
-					Iqisod_tashqari.add(infospotIqisod_tashqari2);
-infospotIqisod_tashqari2.addEventListener('click', function(){
-ChangePanorama('jismoniy_ichkari');
-});
-var infospotIqisod_tashqari3 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotIqisod_tashqari3.position.set( -98.04, -1551.72, 4747.70 );
-					Iqisod_tashqari.add(infospotIqisod_tashqari3);
-infospotIqisod_tashqari3.addEventListener('click', function(){
-ChangePanorama('inyaz_tash');
-});
-viewer.add( Iqisod_tashqari );
-var iqtisod_ichkari = new PANOLENS.ImagePanorama( "panoramas/iqtisod_ichkari.jpg" );
-			iqtisod_ichkari.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			iqtisod_ichkari.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			iqtisod_ichkari.addEventListener('click', function(e){
-			});
-
-var infospotiqtisod_ichkari0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotiqtisod_ichkari0.position.set( -4982.25, 52.14, -299.63 );
-					iqtisod_ichkari.add(infospotiqtisod_ichkari0);
-infospotiqtisod_ichkari0.addEventListener('click', function(){
-ChangePanorama('Iqisod_tashqari');
-});
-viewer.add( iqtisod_ichkari );
-var iqtisod_orqa = new PANOLENS.ImagePanorama( "panoramas/iqtisod_orqa.jpg" );
-			iqtisod_orqa.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			iqtisod_orqa.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			iqtisod_orqa.addEventListener('click', function(e){
-			});
-
-var infospotiqtisod_orqa0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotiqtisod_orqa0.position.set( 294.47, -1635.50, -4706.49 );
-					iqtisod_orqa.add(infospotiqtisod_orqa0);
-infospotiqtisod_orqa0.addEventListener('click', function(){
-ChangePanorama('maktabgacha_yon');
-});
-var infospotiqtisod_orqa1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotiqtisod_orqa1.position.set( 4600.91, -1930.49, 202.66 );
-					iqtisod_orqa.add(infospotiqtisod_orqa1);
-infospotiqtisod_orqa1.addEventListener('click', function(){
-ChangePanorama('yotoqxona_yolak3_4');
-});
-var infospotiqtisod_orqa2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotiqtisod_orqa2.position.set( 71.38, -1335.56, 4810.63 );
-					iqtisod_orqa.add(infospotiqtisod_orqa2);
-infospotiqtisod_orqa2.addEventListener('click', function(){
-ChangePanorama('PANO_20230107_171522_15');
-});
-viewer.add( iqtisod_orqa );
-var jismoniy_ichkari = new PANOLENS.ImagePanorama( "panoramas/jismoniy_ichkari.jpg" );
-			jismoniy_ichkari.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			jismoniy_ichkari.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			jismoniy_ichkari.addEventListener('click', function(e){
-			});
-
-var infospotjismoniy_ichkari0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotjismoniy_ichkari0.position.set( -4994.24, -41.01, 79.22 );
-					jismoniy_ichkari.add(infospotjismoniy_ichkari0);
-infospotjismoniy_ichkari0.addEventListener('click', function(){
-ChangePanorama('Iqisod_tashqari');
-});
-viewer.add( jismoniy_ichkari );
-var maktabgacha_tash = new PANOLENS.ImagePanorama( "panoramas/maktabgacha_tash.jpg" );
-			maktabgacha_tash.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			maktabgacha_tash.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			maktabgacha_tash.addEventListener('click', function(e){
-			});
-
-var infospotmaktabgacha_tash0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotmaktabgacha_tash0.position.set( 884.43, -1420.03, 4703.54 );
-					maktabgacha_tash.add(infospotmaktabgacha_tash0);
-infospotmaktabgacha_tash0.addEventListener('click', function(){
-ChangePanorama('maktabgacha_yon');
-});
-viewer.add( maktabgacha_tash );
-var maktabgacha_yon = new PANOLENS.ImagePanorama( "panoramas/maktabgacha_yon.jpg" );
-			maktabgacha_yon.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			maktabgacha_yon.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			maktabgacha_yon.addEventListener('click', function(e){
-			});
-
-var infospotmaktabgacha_yon0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotmaktabgacha_yon0.position.set( -4795.30, -1399.13, 21.93 );
-					maktabgacha_yon.add(infospotmaktabgacha_yon0);
-infospotmaktabgacha_yon0.addEventListener('click', function(){
-ChangePanorama('maktabgacha_tash');
-});
-var infospotmaktabgacha_yon1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotmaktabgacha_yon1.position.set( 4734.77, -1564.88, 252.11 );
-					maktabgacha_yon.add(infospotmaktabgacha_yon1);
-infospotmaktabgacha_yon1.addEventListener('click', function(){
-ChangePanorama('iqtisod_orqa');
-});
-var infospotmaktabgacha_yon2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotmaktabgacha_yon2.position.set( -261.72, -1650.90, 4702.53 );
-					maktabgacha_yon.add(infospotmaktabgacha_yon2);
-infospotmaktabgacha_yon2.addEventListener('click', function(){
-ChangePanorama('PANO_20230108_110557_12');
-});
-viewer.add( maktabgacha_yon );
-var sport_zal = new PANOLENS.ImagePanorama( "panoramas/sport_zal.jpg" );
-			sport_zal.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			sport_zal.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			sport_zal.addEventListener('click', function(e){
-			});
-
-var infospotsport_zal0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotsport_zal0.position.set( 4964.93, 516.01, -95.68 );
-					sport_zal.add(infospotsport_zal0);
-infospotsport_zal0.addEventListener('click', function(){
-ChangePanorama('sport_zal_ichi');
-});
-var infospotsport_zal1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotsport_zal1.position.set( 3736.31, -1013.39, 3149.57 );
-					sport_zal.add(infospotsport_zal1);
-infospotsport_zal1.addEventListener('click', function(){
-ChangePanorama('stadion');
-});
-viewer.add( sport_zal );
-var sport_zal_ichi = new PANOLENS.ImagePanorama( "panoramas/sport_zal_ichi.jpg" );
-			sport_zal_ichi.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			sport_zal_ichi.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			sport_zal_ichi.addEventListener('click', function(e){
-			});
-
-var infospotsport_zal_ichi0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotsport_zal_ichi0.position.set( 4777.58, -95.89, 1447.32 );
-					sport_zal_ichi.add(infospotsport_zal_ichi0);
-infospotsport_zal_ichi0.addEventListener('click', function(){
-ChangePanorama('sport_zal');
-});
-viewer.add( sport_zal_ichi );
-var stadion = new PANOLENS.ImagePanorama( "panoramas/stadion.jpg" );
-			stadion.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			stadion.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			stadion.addEventListener('click', function(e){
-			});
-
-var infospotstadion0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
-					infospotstadion0.position.set( 4742.19, 729.54, -1380.47 );
-					infospotstadion0.visible = false;
-					stadion.add(infospotstadion0);
-infospotstadion0.addEventListener('click', function(){
-ChangePanorama('atf');
-});
-var infospotstadion1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
-					infospotstadion1.position.set( 4870.36, 607.88, 906.96 );
-					infospotstadion1.visible = false;
-					stadion.add(infospotstadion1);
-infospotstadion1.addEventListener('click', function(){
-ChangePanorama('sport_zal');
-});
-var infospotstadion2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
-					infospotstadion2.position.set( -3416.74, 103.00, 3638.92 );
-					infospotstadion2.visible = false;
-					stadion.add(infospotstadion2);
-infospotstadion2.addEventListener('click', function(){
-ChangePanorama('stadion_start');
-});
-viewer.add( stadion );
-var stadion_start = new PANOLENS.ImagePanorama( "panoramas/stadion_start.jpg" );
-			stadion_start.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			stadion_start.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			stadion_start.addEventListener('click', function(e){
-			});
-
-var infospotstadion_start0 = new PANOLENS.Infospot( 512, hotspotIcons[12].data, true );
-					infospotstadion_start0.position.set( -2535.62, -1786.64, -3909.49 );
-					stadion_start.add(infospotstadion_start0);
-infospotstadion_start0.addEventListener('click', function(){
-ChangePanorama('uzlet_orqa');
-});
-var infospotstadion_start1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotstadion_start1.position.set( 3401.83, -1385.01, -3377.70 );
-					stadion_start.add(infospotstadion_start1);
-infospotstadion_start1.addEventListener('click', function(){
-ChangePanorama('stadion');
-});
-var infospotstadion_start2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotstadion_start2.position.set( -203.14, -1269.96, 4822.23 );
-					stadion_start.add(infospotstadion_start2);
-infospotstadion_start2.addEventListener('click', function(){
-ChangePanorama('inyaz_yol');
-});
-viewer.add( stadion_start );
-var uzlet_ichkari = new PANOLENS.ImagePanorama( "panoramas/uzlet_ichkari.jpg" );
-			uzlet_ichkari.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			uzlet_ichkari.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			uzlet_ichkari.addEventListener('click', function(e){
-			});
-
-var infospotuzlet_ichkari0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotuzlet_ichkari0.position.set( -4990.97, -171.38, 43.76 );
-					uzlet_ichkari.add(infospotuzlet_ichkari0);
-infospotuzlet_ichkari0.addEventListener('click', function(){
-ChangePanorama('inyaz_tash');
-});
-viewer.add( uzlet_ichkari );
-var uzlet_orqa = new PANOLENS.ImagePanorama( "panoramas/uzlet_orqa.jpg" );
-			uzlet_orqa.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			uzlet_orqa.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			uzlet_orqa.addEventListener('click', function(e){
-			});
-
-var infospotuzlet_orqa0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotuzlet_orqa0.position.set( -797.64, -2231.66, -4395.90 );
-					uzlet_orqa.add(infospotuzlet_orqa0);
-infospotuzlet_orqa0.addEventListener('click', function(){
-ChangePanorama('yotoqxona_6');
-});
-var infospotuzlet_orqa1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotuzlet_orqa1.position.set( -4759.79, -1458.16, -381.81 );
-					uzlet_orqa.add(infospotuzlet_orqa1);
-infospotuzlet_orqa1.addEventListener('click', function(){
-ChangePanorama('yotoqxona_yolak3_4');
-});
-var infospotuzlet_orqa2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotuzlet_orqa2.position.set( -128.66, -1385.77, 4793.47 );
-					uzlet_orqa.add(infospotuzlet_orqa2);
-infospotuzlet_orqa2.addEventListener('click', function(){
-ChangePanorama('stadion_start');
-});
-viewer.add( uzlet_orqa );
-var yotoqxona_6 = new PANOLENS.ImagePanorama( "panoramas/yotoqxona_6.jpg" );
-			yotoqxona_6.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			yotoqxona_6.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			yotoqxona_6.addEventListener('click', function(e){
-			});
-
-var infospotyotoqxona_60 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_60.position.set( -2832.23, -1038.33, -3980.41 );
-					yotoqxona_6.add(infospotyotoqxona_60);
-infospotyotoqxona_60.addEventListener('click', function(){
-ChangePanorama('uzlet_orqa');
-});
-viewer.add( yotoqxona_6 );
-var yotoqoxona_4 = new PANOLENS.ImagePanorama( "panoramas/yotoqoxona_4.jpg" );
-			yotoqoxona_4.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			yotoqoxona_4.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			yotoqoxona_4.addEventListener('click', function(e){
-			});
-
-var infospotyotoqoxona_40 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqoxona_40.position.set( -4749.65, -1529.81, 189.59 );
-					yotoqoxona_4.add(infospotyotoqoxona_40);
-infospotyotoqoxona_40.addEventListener('click', function(){
-ChangePanorama('yotoqxona_otish_joy_3_4');
-});
-viewer.add( yotoqoxona_4 );
-var yotoqxona_3 = new PANOLENS.ImagePanorama( "panoramas/yotoqxona_3.jpg" );
-			yotoqxona_3.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			yotoqxona_3.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			yotoqxona_3.addEventListener('click', function(e){
-			});
-
-var infospotyotoqxona_30 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_30.position.set( -2141.36, -2344.37, -3855.36 );
-					yotoqxona_3.add(infospotyotoqxona_30);
-infospotyotoqxona_30.addEventListener('click', function(){
-ChangePanorama('yotoqxona_otish_joy_3_4');
-});
-viewer.add( yotoqxona_3 );
-var yotoqxona_otish_joy_3_4 = new PANOLENS.ImagePanorama( "panoramas/yotoqxona_otish_joy_3_4.jpg" );
-			yotoqxona_otish_joy_3_4.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			yotoqxona_otish_joy_3_4.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			yotoqxona_otish_joy_3_4.addEventListener('click', function(e){
-			});
-
-var infospotyotoqxona_otish_joy_3_40 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_otish_joy_3_40.position.set( 197.64, -1074.65, -4869.91 );
-					yotoqxona_otish_joy_3_4.add(infospotyotoqxona_otish_joy_3_40);
-infospotyotoqxona_otish_joy_3_40.addEventListener('click', function(){
-ChangePanorama('yotoqxona_yolak3_4');
-});
-var infospotyotoqxona_otish_joy_3_41 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_otish_joy_3_41.position.set( 4752.25, -1464.28, 492.74 );
-					yotoqxona_otish_joy_3_4.add(infospotyotoqxona_otish_joy_3_41);
-infospotyotoqxona_otish_joy_3_41.addEventListener('click', function(){
-ChangePanorama('yotoqoxona_4');
-});
-var infospotyotoqxona_otish_joy_3_42 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_otish_joy_3_42.position.set( -4792.47, -1362.60, -272.51 );
-					yotoqxona_otish_joy_3_4.add(infospotyotoqxona_otish_joy_3_42);
-infospotyotoqxona_otish_joy_3_42.addEventListener('click', function(){
-ChangePanorama('yotoqxona_3');
-});
-viewer.add( yotoqxona_otish_joy_3_4 );
-var yotoqxona_yolak3_4 = new PANOLENS.ImagePanorama( "panoramas/yotoqxona_yolak3_4.jpg" );
-			yotoqxona_yolak3_4.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			yotoqxona_yolak3_4.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			yotoqxona_yolak3_4.addEventListener('click', function(e){
-			});
-
-var infospotyotoqxona_yolak3_40 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_yolak3_40.position.set( 4872.98, -1083.47, -105.55 );
-					yotoqxona_yolak3_4.add(infospotyotoqxona_yolak3_40);
-infospotyotoqxona_yolak3_40.addEventListener('click', function(){
-ChangePanorama('yotoqxona_otish_joy_3_4');
-});
-var infospotyotoqxona_yolak3_41 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_yolak3_41.position.set( 162.43, -689.30, -4940.92 );
-					yotoqxona_yolak3_4.add(infospotyotoqxona_yolak3_41);
-infospotyotoqxona_yolak3_41.addEventListener('click', function(){
-ChangePanorama('iqtisod_orqa');
-});
-var infospotyotoqxona_yolak3_42 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
-					infospotyotoqxona_yolak3_42.position.set( -50.10, -1298.91, 4822.08 );
-					yotoqxona_yolak3_4.add(infospotyotoqxona_yolak3_42);
-infospotyotoqxona_yolak3_42.addEventListener('click', function(){
-ChangePanorama('uzlet_orqa');
-});
-viewer.add( yotoqxona_yolak3_4 );
-var inyaz_ichkari = new PANOLENS.ImagePanorama( "panoramas/inyaz_ichkari.jpg" );
-			inyaz_ichkari.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			inyaz_ichkari.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			inyaz_ichkari.addEventListener('click', function(e){
-			});
-
-var infospotinyaz_ichkari0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
-					infospotinyaz_ichkari0.position.set( -4972.23, -372.82, 250.33 );
-					inyaz_ichkari.add(infospotinyaz_ichkari0);
-infospotinyaz_ichkari0.addEventListener('click', function(){
-ChangePanorama('inyaz_tash');
-});
-viewer.add( inyaz_ichkari );
-var test = new PANOLENS.ImagePanorama( "panoramas/test.jpg" );
-			test.addEventListener('progress', function(e){
-				$("#loading").show();
-			});
-			test.addEventListener('load', function(e){
-				$("#loading").fadeOut();
-			});
-			test.addEventListener('click', function(e){
-			});
-
-viewer.add( test );
-$(document).ready(function(){ ChangePanorama('PANO_20230108_105229_7 '); });
-
-/*panoramas-end*/
-            
-			
-			function hideTemp(){
-				$("#tmp").fadeOut();
-				setTimeout(function(){
-					$("#tmpcontent").html("");
-				},1000);
-			}
-			
-			function showMedia(type, content){
-				switch(type){
-					case 1 :
-						//Image
-						$("#tmpcontent").html("<img src='"+content+"' style='width: 100%;'>");
-						$("#tmp").fadeIn();
-						break;
-					case 2 :
-						//Video
-						$("#tmpcontent").html("<video id='webvideo' controls autoplay style='width: 100%; height: 100%;'><source src='" +content+ "' type='video/mp4'> Your browser does not support the video tag. </video>");
-						$("#tmp").fadeIn();
-						break;
-					case 3 :
-						//Audio
-						$("#tmpcontent").html("<audio controls style='width: 100%;'><source src='"+content+"' type='audio/ogg'>Your browser does not support the audio tag.</audio>");
-						$("#tmp").fadeIn();
-						break;
-					case 4 :
-						//PDF
-						$("#tmpcontent").html("<iframe src='pdfjs/web/viewer.html?file=../../"+content+"' style='width: 100%; height: 99%;'></iframe>");
-						$("#tmp").fadeIn();
-						break;
-				}
-			}
-			
-			
-			
-			//Update Callback
-			viewer.addUpdateCallback(function(){
-				
-				/*viewerupdatecallback*/
-if(viewer.panorama == PANO_20230108_105229_7){
-}
-
-if(viewer.panorama == PANO_20230107_160631_2){
-}
-
-if(viewer.panorama == PANO_20230107_162254_5){
-}
-
-if(viewer.panorama == PANO_20230108_110219_11){
-}
-
-if(viewer.panorama == PANO_20230108_105629_10){
-}
-
-if(viewer.panorama == PANO_20230107_162743_6){
-}
-
-if(viewer.panorama == PANO_20230107_163309_7){
-}
-
-if(viewer.panorama == PANO_20230107_164002_8){
-}
-
-if(viewer.panorama == PANO_20230107_164448_9){
-}
-
-if(viewer.panorama == PANO_20230107_165038_10){
-}
-
-if(viewer.panorama == PANO_20230107_165527_11){
-}
-
-if(viewer.panorama == PANO_20230107_170248_13){
-}
-
-if(viewer.panorama == PANO_20230107_171131_14){
-}
-
-if(viewer.panorama == PANO_20230108_110557_12){
-}
-
-if(viewer.panorama == PANO_20230107_171522_15){
-}
-
-if(viewer.panorama == PANO_20230107_171940_16){
-}
-
-if(viewer.panorama == atf){
-}
-
-if(viewer.panorama == atf_main){
-}
-
-if(viewer.panorama == atf_maruzxona){
-}
-
-if(viewer.panorama == atf_yol_1){
-}
-
-if(viewer.panorama == atf_yol_2){
-}
-
-if(viewer.panorama == inyaz_tash){
-}
-
-if(viewer.panorama == inyaz_yol){
-}
-
-if(viewer.panorama == Iqisod_tashqari){
-}
-
-if(viewer.panorama == iqtisod_ichkari){
-}
-
-if(viewer.panorama == iqtisod_orqa){
-}
-
-if(viewer.panorama == jismoniy_ichkari){
-}
-
-if(viewer.panorama == maktabgacha_tash){
-}
-
-if(viewer.panorama == maktabgacha_yon){
-}
-
-if(viewer.panorama == sport_zal){
-}
-
-if(viewer.panorama == sport_zal_ichi){
-}
-
-if(viewer.panorama == stadion){
-ShowMyInfospot(infospotstadion0, 'infospotstadion0');
-ShowMyInfospot(infospotstadion1, 'infospotstadion1');
-ShowMyInfospot(infospotstadion2, 'infospotstadion2');
-}
-
-if(viewer.panorama == stadion_start){
-}
-
-if(viewer.panorama == uzlet_ichkari){
-}
-
-if(viewer.panorama == uzlet_orqa){
-}
-
-if(viewer.panorama == yotoqxona_6){
-}
-
-if(viewer.panorama == yotoqoxona_4){
-}
-
-if(viewer.panorama == yotoqxona_3){
-}
-
-if(viewer.panorama == yotoqxona_otish_joy_3_4){
-}
-
-if(viewer.panorama == yotoqxona_yolak3_4){
-}
-
-if(viewer.panorama == inyaz_ichkari){
-}
-
-if(viewer.panorama == test){
-}
-/*viewerupdatecallback-end*/
-				
-				
-			});
-			
-			
-			
-			var hotspotsvisible = true;
-			function ShowMyInfospot(hs, elid){
-				var thehs = toScreenPosition(hs);
-				if(thehs.z < 1){
-					$("#" + elid).css({
-						"top" : (thehs.y - ($("#" + elid).height()/2)) + "px",
-						"left" : (thehs.x - ($("#" + elid).width()/2)) + "px",
-					});
-					if(hotspotsvisible)
-						$("#" + elid).show();
-				}else{
-					$("#" + elid).hide();
-				}
-				
-			}
-			
-			function toScreenPosition(obj)
-			{
-				var vector = new THREE.Vector3();
-				var widthHalf = 0.5 * innerWidth;
-				var heightHalf = 0.5 * innerHeight;
-				
-				//obj.updateMatrixWorld();				
-				vector.setFromMatrixPosition(obj.matrixWorld);
-				
-				
-				vector.project(viewer.camera);
-
-				vector.x = ( vector.x * widthHalf ) + widthHalf;
-				vector.y = - ( vector.y * heightHalf ) + heightHalf;
-
-				
-				return { 
-					x: vector.x,
-					y: vector.y,
-					z: vector.z,
-				};
-
-			};
-			
-			var currentPanorama;
-			function ChangePanorama(panorama){
-				currentPanorama = panorama;
-				HideInfospots(); 
-				//$("#loading").fadeIn();
-				//$(".customhotspot").fadeOut();
-				setTimeout(function(){
-					viewer.setPanorama(window[panorama]);
-				}, 500);
-				setTimeout(function(){
-					$("#" + panorama).fadeIn();
-				}, 1500);
-				
-			}
-			
-			function HideInfospots(){
-				$(".customhotspot").fadeOut();
-			}
-
-			/*customjs*/
-function chclickinfospotstadion0(){ 
-ChangePanorama('atf');
-}
-
-function chclickinfospotstadion1(){ 
-ChangePanorama('sport_zal');
-}
-
-function chclickinfospotstadion2(){ 
-ChangePanorama('stadion_start');
-}
-/*customjs-end*/
-        </script>
-	</body>
-</html>
