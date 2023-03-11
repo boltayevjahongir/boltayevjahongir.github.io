@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+    input{
+        width: 75%  !important;
+        margin: 5px auto;
+    }
+    .font-weight-bold{
+        font-weight: 600 !important;
+    }
+    
+    </style>
+    <title>Ro'yxatdan o'tish | Registration</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-center mt-2">
+            <div class="col-md-4 text-center shadow-lg p-3 mb-5 bg-body rounded ">
+                <img class="img img-rounted w-50" src="./img/logo_terdu.png" alt="">
+                <p class="text-uppercase mt-2">Termiz davlat universiteti</p>
+                <form class="p-3">
+                    <div class="mb-3 text-center">
+                      <label for="exampleInputEmail1" class="form-label"><span class="font-weight-bold">ID raqam</span> kiriting:</label>
+                      <input type="number" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="340001234567" required>
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Yuborish</button>
+                  </form>
+                  <div class="alert alert-success m-2" role="alert">
+                    <h4 class="alert-heading">DIQQAT!</h4>
+                    <p><span class="font-weight-bold">ID raqam</span> - student.tersu.uz (HEMIS) tizimidagi Talaba ID raqam</p>
+                    <p>Professor o'qituvchilar hemis.tersu.uz tizimining profile bo'limidan ID raqamini bilib olishi mumkin</p>
+                    <p class="mb-0">ID raqamga ega bo'lmagan foydalanuvchilar @terdu_unifi_bot telegram botidan olishi mumkin</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+    <script src="./js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
