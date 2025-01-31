@@ -1,442 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Surxondaryo viloyati bandlik bosh boshqarmasi">
-    <meta property="og:title" content="Surxondaryo viloyati bandlik bosh boshqarmasi" />
-    <meta property="og:type" content=""Surxondaryo viloyati bandlik bosh boshqarmasi />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <title>Surxondaryo viloyati bandlik bosh boshqarmasi</title>
+    <title>Responsive Background</title>
+    <link rel="stylesheet" href="./assets/css/chat.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- izoh -->
-    <!-- -------- anime css ------ -->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <!-- --------- tiny slider css ------ -->
-    <link rel="stylesheet" href="assets/css/tiny-slider.css">
-    <!-- --------- font awsome css ------ -->
-    <link rel="stylesheet" href="assets/css/all.css">
-    <!-- -------- venobox css ------- -->
-    <link rel="stylesheet" href="assets/css/venobox.css" type="text/css" media="screen" />
-    <!-- ---- Bootstrap css--- -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- ---------- default css --------- -->
-    <link rel="stylesheet" href="assets/css/default.css">
-    <!-- --- style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
-
 <body>
-    <!-- --------- preloader ------------ -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="spinner">
-                <div class="spinner-container">
-                    <div class="spinner-rotator">
-                        <div class="spinner-left">
-                            <div class="spinner-circle"></div>
-                        </div>
-                        <div class="spinner-right">
-                            <div class="spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-
-
-
-    <!-------   Header star ------>
-    <header class="header-area">
-        <div class="navbar-area">
-            <!---- navbar star--->
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <!-- <img class="image" src="./assets/img/Logo/logo_5.png" alt=""> -->
-                            <h4 class="text-primary">Surxondaryo-bandlik</h4>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-scroll-nav="0" aria-current="page" href="#">Bosh saahifa</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-scroll-nav="1" href="#">Boshqarma</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-scroll-nav="3" href="#">Faoliyat yo'nalishlari</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-scroll-nav="5" href="#">Matbuot markazi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" target="_blank" href="">Qabulxona</a>
-                                </li>
-
-
-                            </ul>
-
-                        </div>
-                    </div>
-                </nav>
-              
+    
+     <form action="./home.html">
+    <div class="form-content ">
+        <img src="./assets/images/img-login.png" alt="">
+        
+            <div class="login-box">            
+          
+            <div class="input-box">
+                <input type="text" id="username" placeholder="USERNAME">
             </div>
-            
+
+            <div class="input-box">
+                <input type="password" id="password" placeholder="PASSWORD">
+            </div>
+
+            <a href="#">Forgot password?</a>
+            <button type="submit">Login</button>
         </div>
-        <!---- navbar end--->
-        <div class="header-hero" data-scroll-index="0">
-            <!---- home star ------>
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-            <div class="shape shape-6"></div>
-            <div class="container">
-                <div class="row align-items-center justify-content-center justify-content-lg-between">
-                    <div class="col-lg-6 col-md-10 mt-5 pt-5">
-                        <div class="header-hero-content mt-5">
-                            <!-- <h1 class="header-title wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.2s"><span>TITC.UZ</span></h1> -->
-                            <!-- <h3 class="wow fadeInLeftBig mt-0" data-wow-duration="3s" data-wow-delay="0.2s">Termiz <span>IT</span> Center</h3> -->
-                            <p class="text wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.4s">
-                                <h2>Surxondaryo viloyati bandlik bosh boshqarmasi</h2>
+    </div>
+</form>
 
-                               </p>
-                            <ul class="d-flex">
-                                <li><a href="" class="main-btn wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.8s">More ...</a></li>
-                                <li><a href="" class="header-video venobox wow fadeInLeftBig" data-autoplay="true" data-vbtype="video" data-wow-duration="3s" data-wow-delay="1.2s"><i
-                      class="fas fa-play"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="container">
-                <div class="custom-shape-divider-bottom-1655383767">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <!---- home star ------>
-    </header>
-    <!--------   Header End ----  -->
-
-    <!-- ------- Feature Section Start ---------- -->
-    <section class="feature-section pt-80 pb-80" data-scroll-index="1">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7">
-                    <div class="section-title text-center mb-30">
-
-                        <h1 class="mb-25  wow fadeInUp" data-wow-delay=".2s">Davlat xizmatlari</h1>
-                        <!-- <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error enim perspiciatis iste dignissimos tempore?</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="single-feature wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
-                        <div class="p-5">
-                            <i class="fa fa-search fa-4x"></i>
-                        </div>
-                        <div class="content">
-                            <h4>O'zbekistonda ish topish <br><br></h4>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sequi pariatur qui ut dolore excepturi! -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-feature wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.4s">
-                        <div class="p-5">
-                            <i class="fa fa-briefcase fa-4x"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Ishga joylashganim tarixi <br><br></h4>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sequi pariatur qui ut dolore excepturi! -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-feature wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.6s">
-                        <div class="p-5">
-                            <i class="fa fa-edit fa-4x"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Davlat mehnat inspeksiyasiga murojaat qilish</h4>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sequi pariatur qui ut dolore excepturi! -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <br><br>
-                <div class="col-lg-4">
-                    <div class="single-feature wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
-                        <div class="p-5">
-                            <i class="fa fa fa-list-alt fa-4x"></i>
-                        </div>
-                        <div class="content">
-                            <h4>
-                                Yuridik shaxslar uchun Mehnat shartnomasini onlayn rasmiylashtirish</h4>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sequi pariatur qui ut dolore excepturi! -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-feature wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.4s">
-                        <div class="p-5">
-                            <i class="fa fa-user fa-4x"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Yuridik shaxslar uchun Ishchi topish <br><br></h4>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sequi pariatur qui ut dolore excepturi! -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-feature wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.6s">
-                        <div class="p-5">
-                            <i class="fa fa-folder-open fa-4x"></i>
-                        </div> 
-                        <div class="content">
-                            <h4>Yuridik shaxslar uchun XBAni xususiy bandlik agentliklari reestriga kiritish</h4>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sequi pariatur qui ut dolore excepturi! -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ------- Feature Section End ---------- -->
-
-
-    <!-- ----------- FAQ Section Start --------- -->
-    <section class="faq-section pt-120" data-scroll-index="5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7">
-                    <div class="section-title text-center mb-60">
-                        <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Ko'p beriladigan savollar</h1>
-                        <!-- <p class="mb-25 wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates, rem est quas ullam consequatur.</p> -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="accordion wow fadeInLeftBig" id="accordionExample" data-wow-duration="3s" data-wow-delay="0.5s">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Ish joylarni attestasiyadan o‘tkazish – bu nima?
-							  
-                  </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Ish joylarni attestasiyadan o`tkazish – ishlab chiqarish muhitidagi fizikaviy, kimyoviy, biologik omillarni, ish joyida mehnat jarayonidagi og`irlik va zo`riqishni sinov asboblarida kompleks o`rganish, uskunalarning jarohat yetkazish xavfini aniqlash jarayonidir.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-
-                                        Ish joylarning attestasiyadan o`tkazish qayerda o`tkaziladi?
-							  
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        O‘zbekiston Respublikasi Adliya vazirligida 28 may 1996 yilda 247-raqam bilan ro‘yxatga olingan “Mehnat sharoitlarini baxolash, mehnat sharoitlari bo‘yicha ish joylarini attestasiyadan o‘tkazish uslubiyoti”ga muvofiq attestasiyadan o‘tkazish ishlari tashkiliy-huquqiy shakli, mulkchilik shakli va idoraviy bo‘ysunishidan qat'i nazar korxona va tashkilotlarda amalga oshiriladi. </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">  
-                                        Nima uchun ish joylarni attestasiyadan o‘tkazish zarur?
-							  
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Ish joylarni attestasiyadan o‘tkazishning asosiy maqsadi, fuqarolarni sanitariya-gigiena me'yorlariga javob beruvchi sog‘lom va xavfsiz mehnat sharoitlariga bo‘lgan konstitusiyaviy huquqlarini ro‘yobga chiqarish; Ish joyi sharoitining zararliligi va mehnatning xavfliligi darajasini va qanday sinfga ta'aluqliligini asoslash; Ishlab chiqarishda jarohatlanish va kasb kasalliklariga chalinishni oldini olish, mehnat sharoitlarini sog‘lomlashtirish tadbirlarini ishlab chiqish; O‘zbekiston Respublikasi Vazirlar Mahkamasining 1994 yil 12 maydagi 250-son qarori bilan tasdiqlangan O‘zbekiston Respublikasi «Fuqarolarni davlat pensiya ta'minoti haqida»gi qonuniga asosan imtiyozli davlat pensiya ta'minoti huquqini beruvchi 1, 2 va 3-son ro‘yxatlariga ishlab chiqarish, muassasa, ish, kasb, lavozim va ko‘rsatkichlarini taaluqliligini asoslash; Korxonada noqulay va alohida tusdagi mehnat sharoitida ishlagani uchun yillik qo‘shimcha ta'til kunlari va qiskartirilgan ish vaqti davomiyligi huquqini beruvchi ish, kasb va lavozimlar ro‘yxatlarini aniqlash; Xodimni noqulay mehnat sharoitida ishlagani uchun imtiyozli davlat pensiya ta'minotiga huquqi mavjudligi yoki yo‘kligini tasdiqlash (belgilash); ishlab chiqarishda jarohatlanish va kasb kasalliklariga chalinishni oldini olish, mehnat sharoitlarini sog‘lomlashtirish tadbirlarini ishlab chiqish uchun zarur.
-                                        Ish joylarni attestasiyadan o‘tkazishning asosiy maqsadi, fuqarolarni sanitariya-gigiena me'yorlariga javob beruvchi sog‘lom va xavfsiz mehnat sharoitlariga bo‘lgan konstitusiyaviy huquqlarini ro‘yobga chiqarish; Ish joyi sharoitining zararliligi va mehnatning xavfliligi darajasini va qanday sinfga ta'aluqliligini asoslash; Ishlab chiqarishda jarohatlanish va kasb kasalliklariga chalinishni oldini olish, mehnat sharoitlarini sog‘lomlashtirish tadbirlarini ishlab chiqish; O‘zbekiston Respublikasi Vazirlar Mahkamasining 1994 yil 12 maydagi 250-son qarori bilan tasdiqlangan O‘zbekiston Respublikasi «Fuqarolarni davlat pensiya ta'minoti haqida»gi qonuniga asosan imtiyozli davlat pensiya ta'minoti huquqini beruvchi 1, 2 va 3-son ro‘yxatlariga ishlab chiqarish, muassasa, ish, kasb, lavozim va ko‘rsatkichlarini taaluqliligini asoslash; Korxonada noqulay va alohida tusdagi mehnat sharoitida ishlagani uchun yillik qo‘shimcha ta'til kunlari va qiskartirilgan ish vaqti davomiyligi huquqini beruvchi ish, kasb va lavozimlar ro‘yxatlarini aniqlash; Xodimni noqulay mehnat sharoitida ishlagani uchun imtiyozli davlat pensiya ta'minotiga huquqi mavjudligi yoki yo‘kligini tasdiqlash (belgilash); ishlab chiqarishda jarohatlanish va kasb kasalliklariga chalinishni oldini olish, mehnat sharoitlarini sog‘lomlashtirish tadbirlarini ishlab chiqish uchun zarur. </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading4">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">  
-                                        Ish joylarni attestasiyadan o‘tkazishga kim mas'ul?
-								
-                                    </button>
-                                </h2>
-                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Ish joylarni attestasiyadan o‘z vaqtida va sifatli o‘tkazish uchun korxona raxbari (ish beruvchi) mas'ul. </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading5">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">  
-                                        Ish joylarning attestasiyadan o‘tkazish qaysi davrda amalga oshirilishi lozim?
-								
-                                    </button>
-                                </h2>
-                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Attestasiyadan o‘tkazish davriyligi korxona tomonidan belgilanadi, lekin 5 yilda bir martadan kam bo‘lmasligi kerak..</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="faq-image wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.5s">
-                            <img src="assets/img/faq/faq-img.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- ----------- FAQ Section End --------- -->
-
-    <!-- --------------Footer Section Start ------- -->
-    <footer class="footer-area">
-        <div class="footer-shape shape-1"></div>
-        <div class="footer-shape shape-2"></div>
-        <div class="footer-shape shape-3"></div>
-        <div class="footer-shape shape-4"></div>
-        <div class="footer-shape shape-5"></div>
-        <div class="footer-shape shape-6"></div>
-        <div class="footer-widget pt-30 pb-80">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-about mt-50">
-                            <a href="" class="logo">
-                                <!-- <img src="./assets/img/Logo/logo_5.png" alt=""> -->
-                            </a>
-                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat quo obcaecati excepturi, iste nisi.</p>
-                            <ul class="social">
-                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-link d-flex flex-wrap">
-                            <div class="footer-link-wrapper mt-45">
-                                <div class="footer-title">
-                                    <h4 class="title">Bo`limlar</h4>
-                                </div>
-                                <ul class="link">
-                                    <li><a href="#">Rahbariyat</a></li>
-                                    <li><a href="">Hududiy Markazlar</a></li>
-                                    <li><a href="">Bandlik</a></li>
-                                    <li><a href="">Mehnat muhofazasi</a></li>
-                                    <li><a href="">Mehnat inspeksiyasi</a></li>
-                                    <li><a href="">Mehnat migratsiyasi</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-contact mt-45">
-                            <div class="footer-title">
-                                <h4 class="title">Contact</h4>
-                            </div>
-                            <ul class="contact-list">
-                                <li>
-                                    <div class="contact-info">
-                                        <div class="info-content media-body">
-                                            <p class="text"><i class="fas fa-phone-alt"></i> +998(00) 000-00-00 </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="contact-info">
-                                        <div class="info-content media-body">
-                                            <p class="text"><a href=""><i class="far fa-envelope"></i>
-                          example@gmail.com </a></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="contact-info">
-                                        <div class="info-content media-body">
-                                            <p class="text"><a href="#"><i class="fas fa-globe"></i>
-                          www.surxondaryo-bandlik.titc.uz </a></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="contact-info">
-                                        <div class="info-content media-body">
-                                            <p class="text"><i class="fas fa-map-marker-alt"></i> Termiz, “Barkamol avlod”, 43 </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="lo-lg-12">
-                        <div class="copyright">
-                            <div class="copyright-text text-center">
-                                <p class="text">Copyright &#169; 2021 <a href="https://titc.uz">titc.uz</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- --------------Footer Section End ------- -->
-
-
-
-
-
-    <!-- ---- jquery Js ---- -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <!-- -------- venobox js ------ -->
-    <script type="text/javascript" src="assets/js/venobox.min.js"></script>
-    <!-- ---------- wow js ---------- -->
-    <script src="assets/js/wow.min.js"></script>
-    <!-- ---------- tiny slider js --------- -->
-    <script src="assets/js/tiny-slider.js"></script>
-    <!-- ---------- scrollit js ---------- -->
-    <script src="assets/js/scrollIt.min.js"></script>
-    <!-- -------- font awsome js --------- -->
-    <script src="assets/js/all.js"></script>
-    <!-- ---- Bootstrap Js ---- -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- ---- main js --- -->
-    <script src="assets/js/main.js"></script>
+<script type="module" src="/assets/js/chatbot.js"></script>
+<script>
+    // Hide loader and show content once page is fully loaded
+    window.onload = function() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    };
+</script>
 </body>
-
 </html>
